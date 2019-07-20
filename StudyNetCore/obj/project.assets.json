@@ -12955,11 +12955,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git\\StudyNetCore\\StudyNetCore\\StudyNetCore\\StudyNetCore.csproj",
+      "projectUniqueName": "D:\\Git\\StudyNetCore\\StudyNetCore\\StudyNetCore.csproj",
       "projectName": "StudyNetCore",
-      "projectPath": "D:\\Git\\StudyNetCore\\StudyNetCore\\StudyNetCore\\StudyNetCore.csproj",
+      "projectPath": "D:\\Git\\StudyNetCore\\StudyNetCore\\StudyNetCore.csproj",
       "packagesPath": "C:\\Users\\蜀云泉\\.nuget\\packages\\",
-      "outputPath": "D:\\Git\\StudyNetCore\\StudyNetCore\\StudyNetCore\\obj\\",
+      "outputPath": "D:\\Git\\StudyNetCore\\StudyNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12978,8 +12978,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\Git\\StudyNetCore\\StudyNetCore\\Test\\Test.csproj": {
-              "projectPath": "D:\\Git\\StudyNetCore\\StudyNetCore\\Test\\Test.csproj"
+            "D:\\Git\\StudyNetCore\\Test\\Test.csproj": {
+              "projectPath": "D:\\Git\\StudyNetCore\\Test\\Test.csproj"
             }
           }
         }
