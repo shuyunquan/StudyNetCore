@@ -40,3 +40,7 @@ D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.RazorCoreG
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.RazorTargetAssemblyInfo.cs
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.Views.pdb
+D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\Core.dll
+D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\DB.dll
+D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\DB.pdb
+D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\Core.pdb

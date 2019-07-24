@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using DB;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using StudyNetCore.Service;
@@ -16,6 +18,9 @@ namespace StudyNetCore
             services.AddHttpsRedirection(option=> {
                 option.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
                 option.HttpsPort = 5001;
+            });
+            services.AddDbContext<MyContext>(options=> {
+                options.UseSqlite("Data Source=db");
             });
         }
 
