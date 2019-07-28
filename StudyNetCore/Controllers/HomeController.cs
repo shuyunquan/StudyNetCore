@@ -10,6 +10,7 @@ namespace StudyNetCore.Controllers
     {
         public IActionResult Index()
         {
+            Posts
             return View();
         }
     }
