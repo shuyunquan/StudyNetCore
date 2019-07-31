@@ -20,8 +20,6 @@ D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\StudyNetCore.runtimecon
 D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\StudyNetCore.runtimeconfig.dev.json
 D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\StudyNetCore.dll
 D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\StudyNetCore.pdb
-D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\Test.dll
-D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\Test.pdb
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.csprojAssemblyReference.cache
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.csproj.CoreCompileInputs.cache
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.RazorAssemblyInfo.cache

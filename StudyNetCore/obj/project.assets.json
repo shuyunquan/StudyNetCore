@@ -4903,16 +4903,6 @@
         "runtime": {
           "bin/placeholder/DB.dll": {}
         }
-      },
-      "Test/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "compile": {
-          "bin/placeholder/Test.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Test.dll": {}
-        }
       }
     }
   },
@@ -13306,11 +13296,6 @@
       "type": "project",
       "path": "../DB/DB.csproj",
       "msbuildProject": "../DB/DB.csproj"
-    },
-    "Test/1.0.0": {
-      "type": "project",
-      "path": "../Test/Test.csproj",
-      "msbuildProject": "../Test/Test.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13320,8 +13305,7 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 2.2.6",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3",
-      "Test >= 1.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3"
     ]
   },
   "packageFolders": {
@@ -13356,9 +13340,6 @@
           "projectReferences": {
             "D:\\Git\\StudyNetCore\\DB\\DB.csproj": {
               "projectPath": "D:\\Git\\StudyNetCore\\DB\\DB.csproj"
-            },
-            "D:\\Git\\StudyNetCore\\Test\\Test.csproj": {
-              "projectPath": "D:\\Git\\StudyNetCore\\Test\\Test.csproj"
             }
           }
         }

@@ -29,8 +29,7 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.2.6",
           "Microsoft.NETCore.App": "2.2.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
-          "Test": "1.0.0"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3"
         },
         "runtime": {
           "StudyNetCore.dll": {}
@@ -630,14 +629,6 @@
         },
         "compile": {
           "DB.dll": {}
-        }
-      },
-      "Test/1.0.0": {
-        "runtime": {
-          "Test.dll": {}
-        },
-        "compile": {
-          "Test.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -4013,11 +4004,6 @@
       "sha512": ""
     },
     "DB/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Test/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

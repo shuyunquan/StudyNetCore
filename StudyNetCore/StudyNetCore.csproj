@@ -21,11 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DB\DB.csproj" />
-    <ProjectReference Include="..\Test\Test.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
