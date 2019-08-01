@@ -27,5 +27,25 @@ namespace StudyNetCore.Controllers
         {
             return "你好,许嵩";
         }
+
+        public IActionResult Detail(int id)
+        {
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(HomeIndexViewModel homeIndexViewModel)
+        {
+            //不对,记得换Model
+            Student student = new Student
+            {
+                FirstName = homeIndexViewModel.Name
+            };
+            return RedirectToAction(nameof(Detail));
+        }
     }
 }
