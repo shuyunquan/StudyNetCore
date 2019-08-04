@@ -47,3 +47,4 @@ D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Lay
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_PartialView.g.cshtml.cs
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
