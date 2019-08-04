@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StudyNetCore.Models;
 using StudyNetCore.Service;
@@ -28,7 +28,7 @@ namespace StudyNetCore.Controllers
             return "你好,许嵩";
         }
 
-        public IActionResult Detail(int id)
+        public IActionResult Detail()
         {
             return View();
         }
@@ -38,13 +38,10 @@ namespace StudyNetCore.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(HomeIndexViewModel homeIndexViewModel)
+        public IActionResult Create(IFormCollection model)
         {
-            //不对,记得换Model
-            Student student = new Student
-            {
-                FirstName = homeIndexViewModel.Name
-            };
+            Student student = new Student();
+            TryUpdateModelAsync(student);
             return RedirectToAction(nameof(Detail));
         }
     }

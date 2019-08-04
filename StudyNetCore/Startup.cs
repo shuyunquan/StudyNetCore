@@ -15,7 +15,8 @@ namespace StudyNetCore
         {
             services.AddSingleton<IStudentService,StudentService>();
             services.AddMvc();
-            services.AddHttpsRedirection(option=> {
+            services.AddHttpsRedirection(option =>
+            {
                 option.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
                 option.HttpsPort = 5001;
             });
