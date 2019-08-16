@@ -1,11 +1,14 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Test
 {
     public class Student
     {
-        string Name { get; set; }
-        string Sex { get; set; }
-        int Age { get; set; }
+        [Key]
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Sex { get; set; }
+        public int Age { get; set; }
     }
 }
