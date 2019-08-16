@@ -20,8 +20,6 @@ D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\StudyNetCore.runtimecon
 D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\StudyNetCore.runtimeconfig.dev.json
 D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\StudyNetCore.dll
 D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\StudyNetCore.pdb
-D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\Test.dll
-D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\Test.pdb
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.csprojAssemblyReference.cache
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.csproj.CoreCompileInputs.cache
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.RazorAssemblyInfo.cache
@@ -40,6 +38,7 @@ D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.RazorCoreG
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.RazorTargetAssemblyInfo.cs
 D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.Views.pdb
+<<<<<<< HEAD
 D:\Vae\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\StudyNetCore.deps.json
 D:\Vae\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\StudyNetCore.runtimeconfig.json
 D:\Vae\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\StudyNetCore.runtimeconfig.dev.json
@@ -65,3 +64,15 @@ D:\Vae\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.Views.
 D:\Vae\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.csproj.CopyComplete
 D:\Vae\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.dll
 D:\Vae\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\StudyNetCore.pdb
+=======
+D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\Core.dll
+D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\DB.dll
+D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\DB.pdb
+D:\Git\StudyNetCore\StudyNetCore\bin\Debug\netcoreapp2.2\Core.pdb
+D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Home\Detail.g.cshtml.cs
+D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_PartialView.g.cshtml.cs
+D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+D:\Git\StudyNetCore\StudyNetCore\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
+>>>>>>> 6493fc138a88d0232f7d817c515af35451a0d527

@@ -1,8 +1,5 @@
-﻿using System;
+﻿using StudyNetCore.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Test;
 
 namespace StudyNetCore.Service
 {
@@ -10,5 +7,6 @@ namespace StudyNetCore.Service
     { 
         Student getStudent(int Id);
         void addStudent(Student student);
+        List<Student> getStudentList();
     }
 }

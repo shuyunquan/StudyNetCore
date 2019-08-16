@@ -1,7 +1,27 @@
-﻿
+﻿@model IEnumerable<StudyNetCore.ViewModels.HomeIndexViewModel>
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>我的第一个.Net Core Web项目</h1>
+
+<h1>Student的ViewModel数据展示</h1>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Name - @item.Age</li>
+    }
+</ul>
+
+@Html.Partial("_PartialView", Model)
+@*<partial name="_PartialView" for="HomeIndexViewModel" />*@
+
+<a href="/Home/data" title="点我">点我</a>
+
+<a href="/Home/Detail">添加一条数据</a>
+
+<a asp-controller="Home" asp-action="data">还是点我,TagHelper类型的</a>
+
+
+
 
