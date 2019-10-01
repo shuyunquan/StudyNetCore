@@ -6,15 +6,11 @@ namespace DB
 {
     public class MyContext:DbContext
     {
-        //public MyContext(DbContextOptions<MyContext> options) : base(options) { }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public MyContext(DbContextOptions<MyContext> options)
+          : base(options)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=EFCore;Trusted_Connection=True;");
         }
-
-        public DbSet<Blog> Blogs { get; set; }
-        public DbSet<Post> Posts { get; set; }
+        public DbSet<Movie> Movie { get; set; }
 
     }
 }
