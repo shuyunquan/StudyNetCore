@@ -11,6 +11,6 @@ namespace DB
         {
         }
         public DbSet<Movie> Movie { get; set; }
-
+        public DbSet<TodoItem> TodoItem { get; set; }
     }
 }

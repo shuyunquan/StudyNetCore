@@ -1,0 +1,19 @@
+﻿@model IEnumerable<DomainModels.Movie>
+@{
+    ViewData["Title"] = "Test";
+}
+
+<h1>我就是Movie下面的一个Test页面</h1>
+
+<div>
+    <ul>
+        @foreach (var item in Model)
+        {
+        <li>
+            名字是: @Html.DisplayNameFor(model => model.Title)  |  内容是: @Html.DisplayFor(modelItem => item.Title)
+            类别是: @Html.DisplayNameFor(model => model.Genre)  |  内容是: @Html.DisplayFor(modelItem => item.Genre)
+            价格是: @Html.DisplayNameFor(model => model.Price)  |  内容是: @Html.DisplayFor(modelItem => item.Price)
+        </li>
+        }
+    </ul>
+</div>
