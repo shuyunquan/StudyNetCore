@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using DB;
 using DomainModels;
 using Microsoft.AspNetCore.Mvc;
@@ -17,16 +18,16 @@ namespace WebAPI.Controllers
 
         // GET: api/TodoItem
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<TodoItem> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _context.TodoItem.ToList();
         }
 
         // GET: api/TodoItem/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public TodoItem Get(int id)
         {
-            return "value";
+            return _context.TodoItem.FirstOrDefault(m => m.Id == id);
         }
 
         // POST: api/TodoItem
@@ -37,16 +38,30 @@ namespace WebAPI.Controllers
             _context.SaveChanges();
         }
 
-        // PUT: api/TodoItem/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, TodoItem todoItem)
         {
+            if (id != todoItem.Id)
+            {
+                return BadRequest();
+            }
+            _context.TodoItem.Update(todoItem);
+            _context.SaveChanges();
+            return Ok("ok");
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            TodoItem todoItem = _context.TodoItem.Find(id);
+            if (todoItem == null)
+            {
+                return NotFound();
+            }
+            _context.TodoItem.Remove(todoItem);
+            _context.SaveChanges();
+            return Ok("ok");
         }
     }
 }
