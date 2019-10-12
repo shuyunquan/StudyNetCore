@@ -9,6 +9,11 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<div class="panel-footer add-item-form">
+    @await Html.PartialAsync("AddItem", new Movie())
+</div>
+
 <table class="table">
     <thead>
         <tr>

@@ -44,6 +44,15 @@ namespace Web.Controllers
         {
             return View();
         }
+        public ActionResult AddItem(Movie movie)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return RedirectToAction("Index");
+        }
 
         // POST: Movies/Create
         [HttpPost]
