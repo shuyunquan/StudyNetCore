@@ -20,7 +20,7 @@ namespace Web.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Text = "我是漯河猪🐖";
+            ViewBag.Text = "我是漯河猪🐖🐽🐷";
             ViewBag.Number = 4;
             return View();
         }

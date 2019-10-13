@@ -1,0 +1,19 @@
+﻿@model LoginViewModel
+
+<h1>请登录</h1>
+
+<form asp-action="Login" method="post">
+    <div>
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+    <div>
+        <label asp-for="PassWord"></label>
+        <input asp-for="PassWord" />
+        <span asp-validation-for="PassWord"></span>
+    </div>
+    <div asp-validation-summary="All"></div>
+
+    <input type="submit" value="登录"/>
+</form>

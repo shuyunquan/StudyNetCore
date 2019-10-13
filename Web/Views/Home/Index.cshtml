@@ -2,16 +2,14 @@
     ViewData["Title"] = "Home Page";
 }
 
-    <div>
-        <h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-        
-        <a asp-controller="Movies" asp-action="Index">跳转到Movie/Index页面</a>
 
-        <ul>
-            @for (int i = 0; i < ViewBag.Number; i++)
-            {
-                <li>@ViewBag.Text</li>
-            }
-        </ul>
-    </div>
+<div>
+    <h1 class="display-4">欢迎,这是主页面我还没想好放啥</h1>
+
+    <ul>
+        @for (int i = 0; i < ViewBag.Number; i++)
+        {
+            <li>@ViewBag.Text</li>
+        }
+    </ul>
+</div>

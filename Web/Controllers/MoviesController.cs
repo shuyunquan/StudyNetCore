@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using DB;
 using DomainModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Controllers
 {
+    [Authorize]
     public class MoviesController : Controller
     {
         private readonly MyContext _context;
+
         public MoviesController(MyContext context)
         {
             _context = context;
@@ -50,7 +50,7 @@ namespace Web.Controllers
             {
                 return RedirectToAction("Index");
             }
-
+            _context.Movie.Add(movie);
             return RedirectToAction("Index");
         }
 
