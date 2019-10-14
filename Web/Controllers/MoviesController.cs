@@ -39,11 +39,6 @@ namespace Web.Controllers
             return View(model);
         }
 
-        // GET: Movies/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
         public ActionResult AddItem(Movie movie)
         {
             if (!ModelState.IsValid)
@@ -51,24 +46,8 @@ namespace Web.Controllers
                 return RedirectToAction("Index");
             }
             _context.Movie.Add(movie);
-            return RedirectToAction("Index");
-        }
-
-        // POST: Movies/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Movies");
         }
 
         // GET: Movies/Edit/5
@@ -113,25 +92,15 @@ namespace Web.Controllers
         // GET: Movies/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Movie movie = _context.Movie.Find(id);
+            if (movie != null)
+            {
+                _context.Movie.Remove(movie);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Index");
         }
 
-        // POST: Movies/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
         public IActionResult Test()
         {
