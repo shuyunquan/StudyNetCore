@@ -16,21 +16,32 @@ namespace WebAPI.Controllers
             _context = context;
         }
 
-        // GET: api/TodoItem
+        /// <summary>
+        /// TodoItem获取所有
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public IEnumerable<TodoItem> Get()
         {
             return _context.TodoItem.ToList();
         }
 
-        // GET: api/TodoItem/5
+        /// <summary>
+        /// TodoItem根据Id获取
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}", Name = "Get")]
         public TodoItem Get(int id)
         {
             return _context.TodoItem.FirstOrDefault(m => m.Id == id);
         }
 
-        // POST: api/TodoItem
+        /// <summary>
+        /// TodoItem更新
+        /// </summary>
+        /// <param name="todoItem"></param>
         [HttpPost]
         public void Post(TodoItem todoItem)
         {
@@ -38,6 +49,12 @@ namespace WebAPI.Controllers
             _context.SaveChanges();
         }
 
+        /// <summary>
+        /// TodoItem根据Id修改
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="todoItem"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public IActionResult Put(int id, TodoItem todoItem)
         {
@@ -50,7 +67,11 @@ namespace WebAPI.Controllers
             return Ok("ok");
         }
 
-        // DELETE: api/ApiWithActions/5
+        /// <summary>
+        /// TodoItem根据ID删除
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
