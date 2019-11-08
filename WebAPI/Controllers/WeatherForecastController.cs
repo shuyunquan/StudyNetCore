@@ -56,9 +56,9 @@ namespace WebAPI.Controllers
             payLoad.Add("age", 30);
             payLoad.Add("name", "许嵩");
 
-            var encodeJwt = TokenContext.CreateToken(payLoad, 30);
+            //var encodeJwt = TokenContext.CreateToken(payLoad, 30);
 
-            var result = TokenContext.Validate(encodeJwt, (load) => { return true; });
+            //var result = TokenContext.Validate(encodeJwt, (load) => { return true; });
 
         }
 

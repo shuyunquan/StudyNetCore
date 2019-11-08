@@ -4,6 +4,47 @@
         <name>WebAPI</name>
     </assembly>
     <members>
+        <member name="M:WebAPI.AuthHelper.Appsettings.app(System.String[])">
+            <summary>
+            封装要操作的字符
+            </summary>
+            <param name="sections"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.AuthHelper.JwtHelper.IssueJwt(WebAPI.AuthHelper.TokenModelJwt)">
+            <summary>
+            颁发JWT字符串
+            </summary>
+            <param name="tokenModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.AuthHelper.JwtHelper.SerializeJwt(System.String)">
+            <summary>
+            解析
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebAPI.AuthHelper.TokenModelJwt">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:WebAPI.AuthHelper.TokenModelJwt.Uid">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:WebAPI.AuthHelper.TokenModelJwt.Role">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:WebAPI.AuthHelper.TokenModelJwt.Work">
+            <summary>
+            职能
+            </summary>
+        </member>
         <member name="M:WebAPI.Controllers.TodoItemController.Get">
             <summary>
             TodoItem获取所有
