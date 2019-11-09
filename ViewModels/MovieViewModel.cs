@@ -12,6 +12,6 @@ namespace ViewModels
 
         [Display(Name = "Release Date")]
         [DataType(DataType.Date)]
-        public DateTime ReleaseDate { get; set; }
+        public DateTime Date { get; set; }
     }
 }

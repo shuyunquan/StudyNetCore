@@ -10,6 +10,7 @@ using Web.Models;
 using Microsoft.AspNetCore.Identity;
 using Web.DB;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using AutoMapper;
 
 namespace Web
 {
@@ -44,6 +45,8 @@ namespace Web
             {
                 options.LoginPath = "/Account/Login";
             });
+            //AutoMapper×¢Èë
+            services.AddAutoMapper(typeof(Startup));
 
         }
 

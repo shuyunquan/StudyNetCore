@@ -1,46 +1,24 @@
 ﻿using AutoMapper;
+using DomainModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ViewModels;
 
 namespace Web.AutoMapper
 {
-    public class AutoMapperProfile:Profile
+    public class AutoMapperProfile : Profile
     {
-        public override string ProfileName
+        public AutoMapperProfile()
         {
-            get
-            {
-                return "AutoForIMapperTo";
-            }
-        }
+            #region Movie
+            //CreateMap<Movie, MovieViewModel>(); 字段完全一致就可以这样写
+            CreateMap<Movie, MovieViewModel>()
+                .ForMember(dest => dest.Info, opt => opt.MapFrom(src => src.Title + src.Genre))
+                .ForMember(dest => dest.Date, opt => opt.MapFrom(src => src.ReleaseDate));
 
-        var config = new MapperConfiguration(cfg => {
-          cfg.AddProfile
-
-        });
-
-        protected override void Configure()
-        {
-            base.Configure();
-            typeof(SaveBuyerDemandRequest).Assembly.GetTypes()//SaveBuyerDemandRequest是TSource同属的Assembly底下的任意类，要包含多个Aeembly的话自己扩展咯
-                .Where(i => i.GetInterfaces().Any(t => t.IsGenericType && t.GetGenericTypeDefinition() == typeof(IMapperTo<>)))
-                .ToList().ForEach(item =>
-                {
-                    item.GetInterfaces()
-                        .Where(t => t.IsGenericType && t.GetGenericTypeDefinition() == typeof(IMapperTo<>))
-                        .ToList()//这里可以支持多个IMapperTo
-                        .ForEach(i => {
-                            var t2 = i.GetGenericArguments()[0];
-                            Mapper.CreateMap(item, t2);
-                            Mapper.CreateMap(t2, item);
-                        });
-                });
+            #endregion
         }
     }
-}
-public class SaveBuyerDemandRequest : IMapperTo<BuyerDemandEntity>
-{
-
 }

@@ -1,9 +1,11 @@
 ﻿using System.Linq;
+using AutoMapper;
 using DB;
 using DomainModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ViewModels;
 
 namespace Web.Controllers
 {
@@ -11,10 +13,15 @@ namespace Web.Controllers
     public class MoviesController : Controller
     {
         private readonly MyContext _context;
+        private readonly IMapper _mapper;
 
-        public MoviesController(MyContext context)
+
+        public MoviesController(
+            MyContext context,
+            IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         // GET: Movies
@@ -104,7 +111,17 @@ namespace Web.Controllers
 
         public IActionResult Test()
         {
-            return View(_context.Movie.ToList());
+            var movies = _context.Movie.ToList();
+            if (movies?.Count() > 0)
+            {
+                foreach (var movie in movies)
+                {
+                    MovieViewModel movievm = _mapper.Map<MovieViewModel>(movie);
+                    System.Console.WriteLine("不错哦");
+                }
+            }
+
+            return View();
         }
 
 
