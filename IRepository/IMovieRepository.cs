@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace IRepository
 {
-    public interface IMovieRepository
+    public interface IMovieRepository:IBaseRepository<Movie>
     {
         public Task<int> AddMovie(Movie movieViewModel);
 
