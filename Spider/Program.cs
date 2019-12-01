@@ -49,6 +49,7 @@ namespace Spider
                 //    await SaveDetial(digchip);
                 //}
             //}
+            await SaveDetial(new Digchip());
         }
 
         private static async Task TestAngleSharp(string url)

@@ -1,44 +1,38 @@
-﻿using System.Linq;
-using AutoMapper;
-using DB;
+﻿using AutoMapper;
 using DomainModels;
+using IService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ViewModels;
+using System.Threading.Tasks;
 
 namespace Web.Controllers
 {
     [Authorize]
     public class MoviesController : Controller
     {
-        private readonly MyContext _context;
         private readonly IMapper _mapper;
-
+        private readonly IMovieService _movieService;
 
         public MoviesController(
-            MyContext context,
+            IMovieService movieService,
             IMapper mapper)
         {
-            _context = context;
+            _movieService = movieService;
             _mapper = mapper;
         }
 
         // GET: Movies
         public ActionResult Index()
         {
-            var models = _context.Movie.ToList();
+            var models = _movieService.Query();
             return View(models);
         }
 
         // GET: Movies/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            var model = _context.Movie.FirstOrDefault(m => m.ID == id);
+            var model = _movieService.QueryByID(id);
             if (model == null)
             {
                 return NotFound();
@@ -52,19 +46,14 @@ namespace Web.Controllers
             {
                 return RedirectToAction("Index");
             }
-            _context.Movie.Add(movie);
-            _context.SaveChanges();
+            Task<int> result = _movieService.Add(movie);
             return RedirectToAction("Index", "Movies");
         }
 
         // GET: Movies/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            var movie = _context.Movie.Find(id);
+            var movie = _movieService.QueryByID(id);
             if (movie == null)
             {
                 return NotFound();
@@ -85,9 +74,7 @@ namespace Web.Controllers
                 {
                     return NotFound();
                 }
-                _context.Movie.Update(movie);
-                _context.SaveChanges();
-
+                _movieService.Update(movie);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -99,31 +86,26 @@ namespace Web.Controllers
         // GET: Movies/Delete/5
         public ActionResult Delete(int id)
         {
-            Movie movie = _context.Movie.Find(id);
-            if (movie != null)
-            {
-                _context.Movie.Remove(movie);
-                _context.SaveChanges();
-            }
+            //Movie movie = _movieService.QueryByID(id);
+            //if (movie != null)
+            //{
+            //    _movieService.Delete(movie);
+            //}
             return RedirectToAction("Index");
         }
 
-
         public IActionResult Test()
         {
-            var movies = _context.Movie.ToList();
-            if (movies?.Count() > 0)
-            {
-                foreach (var movie in movies)
-                {
-                    MovieViewModel movievm = _mapper.Map<MovieViewModel>(movie);
-                    System.Console.WriteLine("不错哦");
-                }
-            }
-
+            //var movies = _movieService.Query();
+            //if (movies?.Count() > 0)
+            //{
+            //    foreach (var movie in movies)
+            //    {
+            //        MovieViewModel movievm = _mapper.Map<MovieViewModel>(movie);
+            //        System.Console.WriteLine("不错哦");
+            //    }
+            //}
             return View();
         }
-
-
     }
 }

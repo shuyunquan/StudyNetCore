@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Identity;
 using Web.DB;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using AutoMapper;
+using System.Reflection;
 
 namespace Web
 {
@@ -47,6 +48,7 @@ namespace Web
             });
             //AutoMapper×¢Èë
             services.AddAutoMapper(typeof(Startup));
+
 
         }
 

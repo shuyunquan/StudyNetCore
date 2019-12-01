@@ -1,11 +1,11 @@
-﻿using System;
+﻿using DomainModels;
+using System;
 using System.Threading.Tasks;
 using ViewModels;
 
 namespace IService
 {
-    public interface IMovieService
+    public interface IMovieService:IBaseService<Movie>
     {
-        public Task<int> AddMovie(MovieViewModel movieViewModel);
     }
 }
