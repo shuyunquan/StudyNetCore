@@ -16,8 +16,6 @@ namespace IService
 
         Task<bool> DeleteById(object id);
 
-        Task<bool> Delete(T model);
-
         Task<bool> DeleteByIds(object[] ids);
 
         Task<bool> Update(T model);

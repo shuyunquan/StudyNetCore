@@ -12,6 +12,10 @@ using Web.DB;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using AutoMapper;
 using System.Reflection;
+using Autofac;
+using Alexinea.Autofac.Extensions.DependencyInjection;
+using Service;
+using Repository;
 
 namespace Web
 {
@@ -49,6 +53,19 @@ namespace Web
             //AutoMapper注入
             services.AddAutoMapper(typeof(Startup));
 
+            //注入自己写的接口
+            var builder = new ContainerBuilder();
+            builder.Populate(services);
+            builder.RegisterAssemblyTypes(typeof(MovieRepository).Assembly)
+                   .Where(t => t.Name.EndsWith("Repository"))
+                   .AsImplementedInterfaces();
+            builder.RegisterAssemblyTypes(typeof(MovieService).Assembly)
+                 .Where(t => t.Name.EndsWith("Service"))
+                 .AsImplementedInterfaces();
+
+            //创建容器.
+            //AutofacContainer = builder.Build();
+            //return new AutofacServiceProvider(AutofacContainer);
 
         }
 

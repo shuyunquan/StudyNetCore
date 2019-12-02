@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using System.Linq;
+using ViewModels;
 
 namespace Web.Controllers
 {
@@ -86,25 +88,25 @@ namespace Web.Controllers
         // GET: Movies/Delete/5
         public ActionResult Delete(int id)
         {
-            //Movie movie = _movieService.QueryByID(id);
-            //if (movie != null)
-            //{
-            //    _movieService.Delete(movie);
-            //}
+            var movie = _movieService.QueryByID(id);
+            if (movie != null)
+            {
+                _movieService.DeleteById(movie.Id);
+            }
             return RedirectToAction("Index");
         }
 
-        public IActionResult Test()
+        public async Task<IActionResult> Test()
         {
-            //var movies = _movieService.Query();
-            //if (movies?.Count() > 0)
-            //{
-            //    foreach (var movie in movies)
-            //    {
-            //        MovieViewModel movievm = _mapper.Map<MovieViewModel>(movie);
-            //        System.Console.WriteLine("不错哦");
-            //    }
-            //}
+            var movies = await _movieService.Query();
+            if (movies?.Count() > 0)
+            {
+                foreach (var movie in movies)
+                {
+                    var movievm = _mapper.Map<MovieViewModel>(movie);
+                    System.Console.WriteLine("不错哦");
+                }
+            }
             return View();
         }
     }

@@ -19,7 +19,6 @@ namespace IRepository
         Task<List<T>> QueryByIDs(int[] Ids);
         Task<int> Add(T model);
         Task<bool> DeleteById(int Id);
-        Task<bool> Delete(T model);
         Task<bool> DeleteByIds(int[] Ids);
         Task<bool> Update(T model);
         Task<bool> Update(T entity, string strWhere);
