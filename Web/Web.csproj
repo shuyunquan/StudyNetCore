@@ -24,8 +24,6 @@
   <ItemGroup>
     <ProjectReference Include="..\DB\DB.csproj" />
     <ProjectReference Include="..\DomainModels\DomainModels.csproj" />
-    <ProjectReference Include="..\IRepository\IRepository.csproj" />
-    <ProjectReference Include="..\IService\IService.csproj" />
     <ProjectReference Include="..\Repository\Repository.csproj" />
     <ProjectReference Include="..\Service\Service.csproj" />
     <ProjectReference Include="..\ViewModels\ViewModels.csproj" />

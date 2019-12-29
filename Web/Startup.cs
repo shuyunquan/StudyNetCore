@@ -16,6 +16,8 @@ using Autofac;
 using Alexinea.Autofac.Extensions.DependencyInjection;
 using Service;
 using Repository;
+using IService;
+using IRepository;
 
 namespace Web
 {
@@ -28,7 +30,7 @@ namespace Web
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // 服务的注入和配置
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
@@ -53,23 +55,15 @@ namespace Web
             //AutoMapper注入
             services.AddAutoMapper(typeof(Startup));
 
-            //注入自己写的接口
-            var builder = new ContainerBuilder();
-            builder.Populate(services);
-            builder.RegisterAssemblyTypes(typeof(MovieRepository).Assembly)
-                   .Where(t => t.Name.EndsWith("Repository"))
-                   .AsImplementedInterfaces();
-            builder.RegisterAssemblyTypes(typeof(MovieService).Assembly)
-                 .Where(t => t.Name.EndsWith("Service"))
-                 .AsImplementedInterfaces();
-
-            //创建容器.
-            //AutofacContainer = builder.Build();
-            //return new AutofacServiceProvider(AutofacContainer);
+            //注入自己写的接口,这两种方式都可以,加不加typeof都行,但是使用AddSingleton报错,不知道为啥,只能使用AddScoped
+            services.AddScoped(typeof(IMovieService), typeof(MovieService));
+            services.AddScoped(typeof(IMovieRepository), typeof(MovieRepository));
+            //services.AddScoped<IMovieService, MovieService>();
+            //services.AddScoped<IMovieRepository, MovieRepository>();
 
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        // 中间件
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

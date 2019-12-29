@@ -1,10 +1,10 @@
 ﻿@model Movie
 
 <form asp-action="AddItem" method="POST">
-    <label asp-for="Title">Add a new item:</label>
-    <input asp-for="Title" type="text">
-    <input asp-for="ReleaseDate" type="datetime">
-    <input asp-for="Genre" type="text">
-    <input asp-for="Price" type="number">
+    <label asp-for="Title">添加新项:</label>
+    <input asp-for="Title" type="text" placeholder="Title">
+    <input asp-for="ReleaseDate" type="datetime-local">
+    <input asp-for="Genre" type="text" placeholder="Genre">
+    <input asp-for="Price" type="number" placeholder="价格">
     <button type="submit">Add</button>
 </form>

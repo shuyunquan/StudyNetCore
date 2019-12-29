@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DomainModels.Movie>
+﻿@model List<DomainModels.Movie>
 @{
     ViewData["Title"] = "Index";
 }
@@ -13,18 +13,20 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReleaseDate)
+                @Html.DisplayNameFor(model => model.FirstOrDefault().ReleaseDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Genre)
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Genre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Price)
             </th>
-            <th></th>
+            <th>
+                操作
+            </th>
         </tr>
     </thead>
     <tbody>

@@ -25,9 +25,9 @@ namespace Web.Controllers
         }
 
         // GET: Movies
-        public ActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var models = _movieService.Query();
+            var models = await _movieService.Query();
             return View(models);
         }
 

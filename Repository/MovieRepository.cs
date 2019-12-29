@@ -1,6 +1,7 @@
 ﻿using DB;
 using DomainModels;
 using IRepository;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,8 +21,8 @@ namespace Repository
 
         public async Task<int> Add(Movie model)
         {
-            _context.Movie.Add(model);
-            return await Task.Run(()=> _context.SaveChanges()); 
+            await _context.Movie.AddAsync(model);
+            return  _context.SaveChanges(); 
         }
 
         public Task<bool> Delete(Movie model)
@@ -41,7 +42,8 @@ namespace Repository
 
         public async Task<List<Movie>> Query()
         {
-            return await Task.Run(() => _context.Movie.ToList());
+            var models = await _context.Movie.ToListAsync();
+            return models;
         }
 
         public Task<List<Movie>> Query(string strWhere)
