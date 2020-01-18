@@ -32,6 +32,18 @@ namespace Web.Controllers
             return View();
         }
 
+        [Route("about-us")]
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        [Route("about-vae")]
+        public IActionResult AboutVae()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

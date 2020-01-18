@@ -11,13 +11,12 @@ using Microsoft.AspNetCore.Identity;
 using Web.DB;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using AutoMapper;
-using System.Reflection;
-using Autofac;
-using Alexinea.Autofac.Extensions.DependencyInjection;
 using Service;
 using Repository;
 using IService;
 using IRepository;
+using System;
+using Autofac;
 
 namespace Web
 {
@@ -36,7 +35,6 @@ namespace Web
             services.AddControllersWithViews();
             services.AddDbContext<MyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAuthentication(IISServerDefaults.AuthenticationScheme);
-        
             //Identity添加的东西
             services.AddDbContext<IdentityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<User, UserRole>().AddEntityFrameworkStores<IdentityContext>().AddDefaultTokenProviders();
@@ -61,6 +59,20 @@ namespace Web
             //services.AddScoped<IMovieService, MovieService>();
             //services.AddScoped<IMovieRepository, MovieRepository>();
 
+            //url全部转换成小写
+            services.AddRouting(options =>
+            {
+                options.LowercaseUrls = true;
+            });
+
+        }
+
+
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterAssemblyTypes(typeof(Program).Assembly).
+                Where(x => x.Name.EndsWith("service", StringComparison.OrdinalIgnoreCase)).AsImplementedInterfaces();
+            builder.RegisterAssemblyTypes();
         }
 
         // 中间件
@@ -76,7 +88,10 @@ namespace Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
+
+            //这个使用静态文件就是确定了静态目录是wwwroot
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -91,6 +106,7 @@ namespace Web
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
         }
     }
 }

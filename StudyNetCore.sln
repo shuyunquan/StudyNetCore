@@ -27,13 +27,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Repository", "3.Repositor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModels", "ViewModels\ViewModels.csproj", "{AFD9AD67-8966-4CFC-8FDB-0863AC73913C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{7D399139-A7EA-4AA9-828E-10D4E1FAEB62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{7D399139-A7EA-4AA9-828E-10D4E1FAEB62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRepository", "IRepository\IRepository.csproj", "{C2CB4022-7DE9-4CDA-9485-EA7869587272}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IRepository", "IRepository\IRepository.csproj", "{C2CB4022-7DE9-4CDA-9485-EA7869587272}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{B8C82425-7E89-44AC-A2BA-40BA77452F07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{B8C82425-7E89-44AC-A2BA-40BA77452F07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IService", "IService\IService.csproj", "{6C6A71C2-B562-4A7B-9789-465D41D10480}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IService", "IService\IService.csproj", "{6C6A71C2-B562-4A7B-9789-465D41D10480}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
