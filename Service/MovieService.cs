@@ -36,12 +36,12 @@ namespace Service
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteById(object id)
+        public Task<bool> DeleteById(int id)
         {
-            throw new NotImplementedException();
+            return _movieRepository.DeleteById(id);
         }
 
-        public Task<bool> DeleteByIds(object[] ids)
+        public Task<bool> DeleteByIds(int[] ids)
         {
             throw new NotImplementedException();
         }
@@ -49,6 +49,11 @@ namespace Service
         public async Task<List<Movie>> Query()
         {
             return await _movieRepository.Query();
+        }
+
+        public async Task<bool> Update(Movie model)
+        {
+            return await _movieRepository.Update(model);
         }
 
         public Task<List<Movie>> Query(string strWhere)
@@ -96,9 +101,9 @@ namespace Service
             throw new NotImplementedException();
         }
 
-        public Task<Movie> QueryByID(int Id)
+        public async Task<Movie> QueryByID(int Id)
         {
-            return _movieRepository.QueryByID(Id);
+            return await _movieRepository.QueryByID(Id);
         }
 
         public Task<Movie> QueryByID(int Id, bool blnUseCache = false)
@@ -112,11 +117,6 @@ namespace Service
         }
 
         public Task<List<Movie>> QueryPage(Expression<Func<Movie, bool>> whereExpression, int intPageIndex = 0, int intPageSize = 20, string strOrderByFileds = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> Update(Movie model)
         {
             throw new NotImplementedException();
         }

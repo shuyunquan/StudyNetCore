@@ -14,9 +14,9 @@ namespace IService
 
         Task<int> Add(T model);
 
-        Task<bool> DeleteById(object id);
+        Task<bool> DeleteById(int id);
 
-        Task<bool> DeleteByIds(object[] ids);
+        Task<bool> DeleteByIds(int[] ids);
 
         Task<bool> Update(T model);
         Task<bool> Update(T entity, string strWhere);

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using System.Linq;
 using ViewModels;
+using System.Text.Encodings.Web;
 
 namespace Web.Controllers
 {
@@ -14,14 +15,17 @@ namespace Web.Controllers
     public class MoviesController : Controller
     {
         private readonly IMapper _mapper;
+        private readonly HtmlEncoder _htmlEncoder;
         private readonly IMovieService _movieService;
 
         public MoviesController(
             IMovieService movieService,
-            IMapper mapper)
+            IMapper mapper,
+            HtmlEncoder htmlEncoder)
         {
             _movieService = movieService;
             _mapper = mapper;
+            _htmlEncoder = htmlEncoder;
         }
 
         // GET: Movies
@@ -39,7 +43,7 @@ namespace Web.Controllers
             {
                 return NotFound();
             }
-            return View(model);
+            return View(model.Result);
         }
 
         public ActionResult AddItem(Movie movie)
@@ -48,6 +52,7 @@ namespace Web.Controllers
             {
                 return RedirectToAction("Index");
             }
+            movie.Title = _htmlEncoder.Encode(movie.Title);
             Task<int> result = _movieService.Add(movie);
             return RedirectToAction("Index", "Movies");
         }
@@ -60,7 +65,7 @@ namespace Web.Controllers
             {
                 return NotFound();
             }
-            return View(movie);
+            return View(movie.Result);
         }
 
         // POST: Movies/Edit/5
@@ -91,7 +96,7 @@ namespace Web.Controllers
             var movie = _movieService.QueryByID(id);
             if (movie != null)
             {
-                _movieService.DeleteById(movie.Id);
+                _movieService.DeleteById(movie.Result.ID);
             }
             return RedirectToAction("Index");
         }

@@ -1,4 +1,5 @@
-﻿using DB;
+﻿using AutoMapper;
+using DB;
 using DomainModels;
 using IRepository;
 using Microsoft.EntityFrameworkCore;
@@ -22,7 +23,7 @@ namespace Repository
         public async Task<int> Add(Movie model)
         {
             await _context.Movie.AddAsync(model);
-            return  _context.SaveChanges(); 
+            return _context.SaveChanges();
         }
 
         public Task<bool> Delete(Movie model)
@@ -30,9 +31,19 @@ namespace Repository
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteById(int Id)
+        public async Task<bool> DeleteById(int Id)
         {
-            throw new NotImplementedException();
+            var movie = await _context.Movie.FindAsync(Id);
+            _context.Movie.Remove(movie);
+            int result = await _context.SaveChangesAsync();
+            if (result > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public Task<bool> DeleteByIds(int[] Ids)
@@ -91,9 +102,10 @@ namespace Repository
             throw new NotImplementedException();
         }
 
-        public Task<Movie> QueryByID(int Id)
+        public async Task<Movie> QueryByID(int Id)
         {
-            throw new NotImplementedException();
+            var movie = await _context.Movie.FindAsync(Id);
+            return movie;
         }
 
         public Task<Movie> QueryByID(int Id, bool blnUseCache = false)
@@ -111,9 +123,11 @@ namespace Repository
             throw new NotImplementedException();
         }
 
-        public Task<bool> Update(Movie model)
+        public async Task<bool> Update(Movie model)
         {
-            throw new NotImplementedException();
+            _context.Movie.Update(model);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
         public Task<bool> Update(Movie entity, string strWhere)

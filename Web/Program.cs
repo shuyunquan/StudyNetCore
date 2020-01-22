@@ -18,9 +18,11 @@ namespace Web
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(webBuilder =>
+            Host.CreateDefaultBuilder(args).
+            UseServiceProviderFactory(new AutofacServiceProviderFactory()) //Ê¹ÓÃAutofacÒÀÀµ×¢Èë
+            .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                }).UseServiceProviderFactory(new AutofacServiceProviderFactory());
+                });
     }
 }

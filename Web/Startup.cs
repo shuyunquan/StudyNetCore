@@ -17,6 +17,7 @@ using IService;
 using IRepository;
 using System;
 using Autofac;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Web
 {
@@ -50,14 +51,18 @@ namespace Web
             {
                 options.LoginPath = "/Account/Login";
             });
+
             //AutoMapper注入
             services.AddAutoMapper(typeof(Startup));
 
             //注入自己写的接口,这两种方式都可以,加不加typeof都行,但是使用AddSingleton报错,不知道为啥,只能使用AddScoped
-            services.AddScoped(typeof(IMovieService), typeof(MovieService));
-            services.AddScoped(typeof(IMovieRepository), typeof(MovieRepository));
+            //services.AddScoped(typeof(IMovieService), typeof(MovieService));
+            //services.AddScoped(typeof(IMovieRepository), typeof(MovieRepository));
             //services.AddScoped<IMovieService, MovieService>();
             //services.AddScoped<IMovieRepository, MovieRepository>();
+
+            //使用缓存
+            services.AddMemoryCache();
 
             //url全部转换成小写
             services.AddRouting(options =>
@@ -65,14 +70,35 @@ namespace Web
                 options.LowercaseUrls = true;
             });
 
+            //防止CSRF攻击
+            services.AddAntiforgery(options =>
+            {
+                //使用cookiebuilder属性设置cookie属性。
+                options.FormFieldName = "AntiforgeryKey_shuyunquan";
+                options.HeaderName = "X-CSRF-TOKEN-shuyunquan";
+                options.SuppressXFrameOptionsHeader = false;
+            });
+            services.AddMvc(options =>
+            {
+                //这个是给所有的post Action都开启了防止CSRF攻击
+                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+            });
+
         }
 
-
+        /// <summary>
+        /// Autofac依赖注入
+        /// </summary>
+        /// <param name="builder"></param>
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            builder.RegisterAssemblyTypes(typeof(Program).Assembly).
-                Where(x => x.Name.EndsWith("service", StringComparison.OrdinalIgnoreCase)).AsImplementedInterfaces();
-            builder.RegisterAssemblyTypes();
+            //builder.RegisterAssemblyTypes(typeof(Program).Assembly).
+            //    Where(x => x.Name.EndsWith("Service", StringComparison.OrdinalIgnoreCase)).AsImplementedInterfaces();
+            //builder.RegisterAssemblyTypes();
+
+            builder.RegisterType<MovieService>().As<IMovieService>().InstancePerLifetimeScope();
+            builder.RegisterType<MovieRepository>().As<IMovieRepository>().InstancePerLifetimeScope();
+
         }
 
         // 中间件

@@ -4,7 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using DomainModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using SqlSugar;
 using Web.Models;
@@ -14,10 +16,12 @@ namespace Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IMemoryCache _cache;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IMemoryCache cache)
         {
             _logger = logger;
+            _cache = cache;
         }
 
         public IActionResult Index()
@@ -33,6 +37,7 @@ namespace Web.Controllers
         }
 
         [Route("about-us")]
+        [Authorize]
         public IActionResult AboutUs()
         {
             return View();
@@ -42,6 +47,11 @@ namespace Web.Controllers
         public IActionResult AboutVae()
         {
             return View();
+        }
+
+        public string TestMemoryCache()
+        {
+            return "测试缓存";
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -61,7 +71,6 @@ namespace Web.Controllers
                 //InitKeyType = InitKeyType.Attribute //从实体特性中读取主键自增列信息
             });
 
-
             //用来打印Sql方便你调式    
             db.Aop.OnLogExecuting = (sql, pars) =>
             {
@@ -70,13 +79,11 @@ namespace Web.Controllers
                 Console.WriteLine();
             };
 
-
             /*查询*/
             var list = db.Queryable<Movie>().ToList();//查询所有
             var getByWhere = db.Queryable<Movie>().Where(it => it.ID == 1).ToList();//根据条件查询
             var total = 0;
             var getPage = db.Queryable<Movie>().Where(it => it.ID == 1).ToPageList(1, 2, ref total);//根据分页查询
-                                                                                                           //多表查询用法 http://www.codeisbug.com/Doc/8/1124
 
             /*插入*/
             var data = new Movie() { Title = "诸葛亮",ReleaseDate= DateTime.Parse("2019-09-09"),Genre="丞相" };
