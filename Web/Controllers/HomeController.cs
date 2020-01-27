@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using SqlSugar;
+using Web.Data;
 using Web.Models;
 
 namespace Web.Controllers
@@ -26,6 +27,7 @@ namespace Web.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("正在访问首页 {0},{1}",1,2);
             ViewBag.Text = "我是漯河猪🐖🐽🐷";
             ViewBag.Number = 4;
             return View();
@@ -46,12 +48,24 @@ namespace Web.Controllers
         [Route("about-vae")]
         public IActionResult AboutVae()
         {
+            _logger.LogWarning("这是一个严重的警告日志,错误变量{0},{1}",555,666);
             return View();
         }
 
         public string TestMemoryCache()
         {
-            return "测试缓存";
+            //首先判断缓存中是否有数据了
+            if (!_cache.TryGetValue(CacheEntryConstants.TestMemoryCache,out string cacheTestMemoryCache))
+            {
+                //如果缓存中没有,则赋值,且加入缓存
+                cacheTestMemoryCache = "测试缓存";
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                    //.SetAbsoluteExpiration(TimeSpan.FromSeconds(600))强制600s之后缓存失效
+                    .SetSlidingExpiration(TimeSpan.FromSeconds(30));//动态设定缓存,访问就+30s,没人访问就30s之后缓存失效
+                //新设置缓存,key,值,参数
+                _cache.Set(CacheEntryConstants.TestMemoryCache, cacheTestMemoryCache, cacheEntryOptions);
+            }
+            return cacheTestMemoryCache;
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

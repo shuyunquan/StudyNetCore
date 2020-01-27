@@ -98,7 +98,6 @@ namespace Web
 
             builder.RegisterType<MovieService>().As<IMovieService>().InstancePerLifetimeScope();
             builder.RegisterType<MovieRepository>().As<IMovieRepository>().InstancePerLifetimeScope();
-
         }
 
         // ÖÐ¼ä¼þ
@@ -107,6 +106,7 @@ namespace Web
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
             }
             else
             {

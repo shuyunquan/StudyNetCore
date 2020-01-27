@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 using System.Linq;
 using ViewModels;
 using System.Text.Encodings.Web;
+using Microsoft.Extensions.Caching.Memory;
+using Web.Data;
+using System.Collections.Generic;
+using System;
 
 namespace Web.Controllers
 {
@@ -16,23 +20,34 @@ namespace Web.Controllers
     {
         private readonly IMapper _mapper;
         private readonly HtmlEncoder _htmlEncoder;
+        private readonly IMemoryCache _memoryCache;
         private readonly IMovieService _movieService;
 
         public MoviesController(
             IMovieService movieService,
             IMapper mapper,
-            HtmlEncoder htmlEncoder)
+            HtmlEncoder htmlEncoder,
+            IMemoryCache memoryCache)
         {
             _movieService = movieService;
             _mapper = mapper;
             _htmlEncoder = htmlEncoder;
+            _memoryCache = memoryCache;
         }
 
         // GET: Movies
         public async Task<IActionResult> Index()
         {
-            var models = await _movieService.Query();
-            return View(models);
+            if (!_memoryCache.TryGetValue(CacheEntryConstants.MovieList,out List<Movie> cacheMovieList))
+            {
+                cacheMovieList = await _movieService.Query();
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                   //.SetAbsoluteExpiration(TimeSpan.FromSeconds(600))强制600s之后缓存失效
+                   .SetSlidingExpiration(TimeSpan.FromSeconds(30));//动态设定缓存,访问就+30s,没人访问就30s之后缓存失效
+                //新设置缓存,key,值,参数
+                _memoryCache.Set(CacheEntryConstants.MovieList, cacheMovieList, cacheEntryOptions);
+            }
+            return View(cacheMovieList);
         }
 
         // GET: Movies/Details/5
@@ -46,6 +61,7 @@ namespace Web.Controllers
             return View(model.Result);
         }
 
+        [HttpPost]
         public ActionResult AddItem(Movie movie)
         {
             if (!ModelState.IsValid)

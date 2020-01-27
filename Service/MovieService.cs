@@ -12,6 +12,7 @@ namespace Service
     public class MovieService : IMovieService
     {
         private readonly IMovieRepository _movieRepository;
+
         public MovieService(IMovieRepository movieRepository)
         {
             _movieRepository = movieRepository;
