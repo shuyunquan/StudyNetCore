@@ -8,24 +8,24 @@ namespace DomainModels
     {
         public int ID { get; set; }
 
-        [StringLength(100,MinimumLength =2)]
-        [Required]
+        /// <summary>
+        /// 标题
+        /// </summary>
         public string Title { get; set; }
 
-        [Display(Name = "Release Date")]
-        [DataType(DataType.Date)]
+        /// <summary>
+        /// 发布日期
+        /// </summary>
         public DateTime ReleaseDate { get; set; }
 
         /// <summary>
         /// 类型
         /// </summary>
-        [StringLength(20)]
         public string Genre { get; set; }
 
         /// <summary>
         /// 售价
         /// </summary>
-        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
     }
 }

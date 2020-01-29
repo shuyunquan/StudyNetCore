@@ -12,6 +12,8 @@ using Microsoft.Extensions.Caching.Memory;
 using Web.Data;
 using System.Collections.Generic;
 using System;
+using StackExchange.Redis;
+using Microsoft.EntityFrameworkCore.Internal;
 
 namespace Web.Controllers
 {
@@ -22,17 +24,20 @@ namespace Web.Controllers
         private readonly HtmlEncoder _htmlEncoder;
         private readonly IMemoryCache _memoryCache;
         private readonly IMovieService _movieService;
+        private readonly IDatabase _db;
 
         public MoviesController(
             IMovieService movieService,
             IMapper mapper,
             HtmlEncoder htmlEncoder,
-            IMemoryCache memoryCache)
+            IMemoryCache memoryCache,
+            IConnectionMultiplexer redis)
         {
             _movieService = movieService;
             _mapper = mapper;
             _htmlEncoder = htmlEncoder;
             _memoryCache = memoryCache;
+            _db = redis.GetDatabase();
         }
 
         // GET: Movies
@@ -47,7 +52,24 @@ namespace Web.Controllers
                 //新设置缓存,key,值,参数
                 _memoryCache.Set(CacheEntryConstants.MovieList, cacheMovieList, cacheEntryOptions);
             }
-            return View(cacheMovieList);
+            List<MovieViewModel> movieViewModels = _mapper.Map<List<MovieViewModel>>(cacheMovieList);
+            //从Redis取出所有的浏览值
+            RedisKey[] redisKeys = movieViewModels.Select(x => (RedisKey)$"movie:{x.ID}:views").ToArray();
+            var viewCounts = await _db.StringGetAsync(redisKeys);
+            //浏览器赋值给MovieViewModel
+            foreach (var movieViewModel in movieViewModels)
+            {
+                var id = movieViewModel.ID;
+                var key = (RedisKey)$"movie:{movieViewModel.ID}:views";
+                var index = redisKeys.IndexOf(key);
+                if (index > -1)
+                {
+                    movieViewModel.ViewCount = viewCounts[index];
+                }
+            }
+            //上面我写的是,先取出所有的Redis里面的计数缓存值,然后再遍历赋值,为什么我不直接通过Redis的值每一个ViewModel都取一次呢?
+            //可能一次获取Redis,多次计算,比每一个都获取Redis好一点吧
+            return View(movieViewModels);
         }
 
         // GET: Movies/Details/5
@@ -58,6 +80,12 @@ namespace Web.Controllers
             {
                 return NotFound();
             }
+            //现在加入Redis计数器功能
+            //首先,Redis缓存需要一个key,这里做法是当前的控制器Movies加上ID,加上Views,然后冒号分隔
+            var key = $"movie:{id}:views";
+            _db.StringIncrement(key);
+            var viewCount = _db.StringGet(key);
+            ViewBag.viewCount = viewCount;
             return View(model.Result);
         }
 
@@ -68,6 +96,7 @@ namespace Web.Controllers
             {
                 return RedirectToAction("Index");
             }
+            //防止XSS攻击
             movie.Title = _htmlEncoder.Encode(movie.Title);
             Task<int> result = _movieService.Add(movie);
             return RedirectToAction("Index", "Movies");

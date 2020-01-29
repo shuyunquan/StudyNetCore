@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using SqlSugar;
+using StackExchange.Redis;
 using Web.Data;
 using Web.Models;
 
@@ -18,11 +19,14 @@ namespace Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IMemoryCache _cache;
+        private readonly IDatabase _db;
 
-        public HomeController(ILogger<HomeController> logger, IMemoryCache cache)
+        public HomeController(ILogger<HomeController> logger, IMemoryCache cache,
+            IConnectionMultiplexer redis)
         {
             _logger = logger;
             _cache = cache;
+            _db = redis.GetDatabase();
         }
 
         public IActionResult Index()
@@ -67,6 +71,14 @@ namespace Web.Controllers
             }
             return cacheTestMemoryCache;
         }
+
+        public string TestRedis()
+        {
+            _db.StringSet("name", "Vae");
+            var name = _db.StringGet("name");
+            return name;
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

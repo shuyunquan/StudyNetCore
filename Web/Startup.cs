@@ -18,6 +18,7 @@ using IRepository;
 using System;
 using Autofac;
 using Microsoft.AspNetCore.Mvc;
+using StackExchange.Redis;
 
 namespace Web
 {
@@ -84,6 +85,8 @@ namespace Web
                 options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
             });
 
+            //Redis»º´æ
+            services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("192.168.28.128:6379"));
         }
 
         /// <summary>

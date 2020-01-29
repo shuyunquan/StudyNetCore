@@ -1,0 +1,543 @@
+2020-01-29 14:45:07.237 +08:00 [INF] User profile is available. Using 'C:\Users\Vae\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-29 14:45:07.578 +08:00 [INF] Now listening on: https://localhost:5001
+2020-01-29 14:45:07.579 +08:00 [INF] Now listening on: http://localhost:5000
+2020-01-29 14:45:07.579 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-01-29 14:45:07.580 +08:00 [INF] Hosting environment: Development
+2020-01-29 14:45:07.580 +08:00 [INF] Content root path: D:\学习\GitProject\StudyNetCore\Web
+2020-01-29 14:45:08.141 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 14:45:08.186 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 14:45:08.234 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 14:45:08.248 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 14:45:08.301 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 14:45:08.395 +08:00 [INF] Executed ViewResult - view Index executed in 96.4092ms.
+2020-01-29 14:45:08.396 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 160.9035ms
+2020-01-29 14:45:08.397 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 14:45:08.400 +08:00 [INF] Request finished in 261.3611ms 200 text/html; charset=utf-8
+2020-01-29 14:45:08.423 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/robots.txt  
+2020-01-29 14:45:08.429 +08:00 [INF] Request finished in 6.136900000000001ms 404 text/plain
+2020-01-29 14:45:08.438 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/css/site.css  
+2020-01-29 14:45:08.439 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0  
+2020-01-29 14:45:08.438 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/js/bootstrap.bundle.min.js  
+2020-01-29 14:45:08.438 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/jquery/dist/jquery.min.js  
+2020-01-29 14:45:08.440 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/lib/bootstrap/dist/css/bootstrap.min.css  
+2020-01-29 14:45:08.448 +08:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\css\site.css'
+2020-01-29 14:45:08.448 +08:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\js\site.js'
+2020-01-29 14:45:08.457 +08:00 [INF] Request finished in 19.078200000000002ms 200 application/javascript
+2020-01-29 14:45:08.457 +08:00 [INF] Request finished in 19.762800000000002ms 200 text/css
+2020-01-29 14:45:08.461 +08:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\lib\jquery\dist\jquery.min.js'
+2020-01-29 14:45:08.461 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2020-01-29 14:45:08.466 +08:00 [INF] Request finished in 27.633000000000003ms 200 application/javascript
+2020-01-29 14:45:08.465 +08:00 [INF] Request finished in 27.8453ms 200 application/javascript
+2020-01-29 14:45:08.463 +08:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2020-01-29 14:45:08.469 +08:00 [INF] Request finished in 30.962200000000003ms 200 text/css
+2020-01-29 14:45:16.705 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 14:45:16.707 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 14:45:16.708 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 14:45:16.709 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 14:45:16.710 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 14:45:16.712 +08:00 [INF] Executed ViewResult - view Index executed in 2.7422ms.
+2020-01-29 14:45:16.714 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 4.521100000000001ms
+2020-01-29 14:45:16.715 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 14:45:16.716 +08:00 [INF] Request finished in 10.6426ms 200 text/html; charset=utf-8
+2020-01-29 14:45:17.825 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 14:45:17.827 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 14:45:17.828 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 14:45:17.829 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 14:45:17.831 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 14:45:17.833 +08:00 [INF] Executed ViewResult - view Index executed in 2.5314ms.
+2020-01-29 14:45:17.835 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 6.213500000000001ms
+2020-01-29 14:45:17.837 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 14:45:17.838 +08:00 [INF] Request finished in 12.9709ms 200 text/html; charset=utf-8
+2020-01-29 14:45:18.953 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/home/privacy  
+2020-01-29 14:45:18.956 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Privacy (Web)'
+2020-01-29 14:45:18.959 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller Web.Controllers.HomeController (Web).
+2020-01-29 14:45:18.960 +08:00 [INF] Executing ViewResult, running view Privacy.
+2020-01-29 14:45:18.963 +08:00 [INF] Executed ViewResult - view Privacy executed in 3.5438ms.
+2020-01-29 14:45:18.965 +08:00 [INF] Executed action Web.Controllers.HomeController.Privacy (Web) in 5.2114ms
+2020-01-29 14:45:18.965 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Privacy (Web)'
+2020-01-29 14:45:18.966 +08:00 [INF] Request finished in 13.4328ms 200 text/html; charset=utf-8
+2020-01-29 14:45:22.016 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 14:45:22.024 +08:00 [INF] Authorization failed.
+2020-01-29 14:45:22.027 +08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2020-01-29 14:45:22.029 +08:00 [INF] Request finished in 13.302100000000001ms 302 
+2020-01-29 14:45:22.049 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Account/Login?ReturnUrl=%2Fmovies  
+2020-01-29 14:45:22.050 +08:00 [INF] Executing endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 14:45:22.052 +08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Web.Controllers.AccountController (Web).
+2020-01-29 14:45:22.180 +08:00 [INF] Executing ViewResult, running view Login.
+2020-01-29 14:45:22.210 +08:00 [INF] Executed ViewResult - view Login executed in 30.553700000000003ms.
+2020-01-29 14:45:22.212 +08:00 [INF] Executed action Web.Controllers.AccountController.Login (Web) in 159.1842ms
+2020-01-29 14:45:22.212 +08:00 [INF] Executed endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 14:45:22.214 +08:00 [INF] Request finished in 164.53820000000002ms 200 text/html; charset=utf-8
+2020-01-29 14:45:23.300 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/about-us  
+2020-01-29 14:45:23.302 +08:00 [INF] Authorization failed.
+2020-01-29 14:45:23.303 +08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2020-01-29 14:45:23.304 +08:00 [INF] Request finished in 3.8767ms 302 
+2020-01-29 14:45:23.321 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Account/Login?ReturnUrl=%2Fabout-us  
+2020-01-29 14:45:23.322 +08:00 [INF] Executing endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 14:45:23.323 +08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Web.Controllers.AccountController (Web).
+2020-01-29 14:45:23.325 +08:00 [INF] Executing ViewResult, running view Login.
+2020-01-29 14:45:23.329 +08:00 [INF] Executed ViewResult - view Login executed in 3.3884000000000003ms.
+2020-01-29 14:45:23.329 +08:00 [INF] Executed action Web.Controllers.AccountController.Login (Web) in 4.790900000000001ms
+2020-01-29 14:45:23.331 +08:00 [INF] Executed endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 14:45:23.331 +08:00 [INF] Request finished in 10.6624ms 200 text/html; charset=utf-8
+2020-01-29 14:45:23.800 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/about-vae  
+2020-01-29 14:45:23.802 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.AboutVae (Web)'
+2020-01-29 14:45:23.803 +08:00 [INF] Route matched with {action = "AboutVae", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AboutVae() on controller Web.Controllers.HomeController (Web).
+2020-01-29 14:45:23.804 +08:00 [WRN] 这是一个严重的警告日志,错误变量555,666
+2020-01-29 14:45:23.805 +08:00 [INF] Executing ViewResult, running view AboutVae.
+2020-01-29 14:45:23.809 +08:00 [INF] Executed ViewResult - view AboutVae executed in 4.4454ms.
+2020-01-29 14:45:23.812 +08:00 [INF] Executed action Web.Controllers.HomeController.AboutVae (Web) in 7.6854000000000005ms
+2020-01-29 14:45:23.812 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.AboutVae (Web)'
+2020-01-29 14:45:23.813 +08:00 [INF] Request finished in 12.628ms 200 text/html; charset=utf-8
+2020-01-29 15:11:45.789 +08:00 [INF] User profile is available. Using 'C:\Users\Vae\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-29 15:11:46.054 +08:00 [INF] Now listening on: https://localhost:5001
+2020-01-29 15:11:46.055 +08:00 [INF] Now listening on: http://localhost:5000
+2020-01-29 15:11:46.055 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-01-29 15:11:46.056 +08:00 [INF] Hosting environment: Development
+2020-01-29 15:11:46.056 +08:00 [INF] Content root path: D:\学习\GitProject\StudyNetCore\Web
+2020-01-29 15:11:46.744 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 15:11:46.788 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 15:11:46.832 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 15:11:46.844 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 15:11:46.890 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 15:11:46.982 +08:00 [INF] Executed ViewResult - view Index executed in 94.52210000000001ms.
+2020-01-29 15:11:46.984 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 149.9309ms
+2020-01-29 15:11:46.984 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 15:11:46.986 +08:00 [INF] Request finished in 244.9173ms 200 text/html; charset=utf-8
+2020-01-29 15:11:59.470 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Home/TestRedis  
+2020-01-29 15:11:59.473 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.TestRedis (Web)'
+2020-01-29 15:11:59.474 +08:00 [INF] Route matched with {action = "TestRedis", controller = "Home"}. Executing controller action with signature System.String TestRedis() on controller Web.Controllers.HomeController (Web).
+2020-01-29 15:12:23.141 +08:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2020-01-29 15:12:23.143 +08:00 [INF] Executed action Web.Controllers.HomeController.TestRedis (Web) in 23668.139900000002ms
+2020-01-29 15:12:23.144 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.TestRedis (Web)'
+2020-01-29 15:12:23.145 +08:00 [INF] Request finished in 23675.1335ms 200 text/plain; charset=utf-8
+2020-01-29 15:21:37.713 +08:00 [INF] User profile is available. Using 'C:\Users\Vae\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-29 15:21:37.987 +08:00 [INF] Now listening on: https://localhost:5001
+2020-01-29 15:21:37.988 +08:00 [INF] Now listening on: http://localhost:5000
+2020-01-29 15:21:37.988 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-01-29 15:21:37.989 +08:00 [INF] Hosting environment: Development
+2020-01-29 15:21:37.989 +08:00 [INF] Content root path: D:\学习\GitProject\StudyNetCore\Web
+2020-01-29 15:21:38.683 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 15:21:38.726 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 15:21:38.772 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 15:21:38.785 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 15:21:38.832 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 15:21:38.922 +08:00 [INF] Executed ViewResult - view Index executed in 93.25930000000001ms.
+2020-01-29 15:21:38.924 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 150.42010000000002ms
+2020-01-29 15:21:38.925 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 15:21:38.927 +08:00 [INF] Request finished in 246.1708ms 200 text/html; charset=utf-8
+2020-01-29 15:22:05.753 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 15:22:05.761 +08:00 [INF] Authorization failed.
+2020-01-29 15:22:05.765 +08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2020-01-29 15:22:05.765 +08:00 [INF] Request finished in 12.6582ms 302 
+2020-01-29 15:22:05.795 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Account/Login?ReturnUrl=%2Fmovies  
+2020-01-29 15:22:05.797 +08:00 [INF] Executing endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 15:22:05.798 +08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Web.Controllers.AccountController (Web).
+2020-01-29 15:22:05.898 +08:00 [INF] Executing ViewResult, running view Login.
+2020-01-29 15:22:05.927 +08:00 [INF] Executed ViewResult - view Login executed in 28.6296ms.
+2020-01-29 15:22:05.928 +08:00 [INF] Executed action Web.Controllers.AccountController.Login (Web) in 129.2216ms
+2020-01-29 15:22:05.929 +08:00 [INF] Executed endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 15:22:05.930 +08:00 [INF] Request finished in 134.6728ms 200 text/html; charset=utf-8
+2020-01-29 15:22:06.732 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 15:22:06.734 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 15:22:06.735 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 15:22:06.738 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 15:22:06.739 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 15:22:06.741 +08:00 [INF] Executed ViewResult - view Index executed in 2.2430000000000003ms.
+2020-01-29 15:22:06.742 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 4.5815ms
+2020-01-29 15:22:06.743 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 15:22:06.744 +08:00 [INF] Request finished in 11.802100000000001ms 200 text/html; charset=utf-8
+2020-01-29 15:22:07.491 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/home/privacy  
+2020-01-29 15:22:07.493 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Privacy (Web)'
+2020-01-29 15:22:07.495 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller Web.Controllers.HomeController (Web).
+2020-01-29 15:22:07.497 +08:00 [INF] Executing ViewResult, running view Privacy.
+2020-01-29 15:22:07.502 +08:00 [INF] Executed ViewResult - view Privacy executed in 5.3367ms.
+2020-01-29 15:22:07.506 +08:00 [INF] Executed action Web.Controllers.HomeController.Privacy (Web) in 10.0855ms
+2020-01-29 15:22:07.507 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Privacy (Web)'
+2020-01-29 15:22:07.508 +08:00 [INF] Request finished in 16.7547ms 200 text/html; charset=utf-8
+2020-01-29 15:22:07.997 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/about-us  
+2020-01-29 15:22:07.998 +08:00 [INF] Authorization failed.
+2020-01-29 15:22:07.999 +08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2020-01-29 15:22:07.999 +08:00 [INF] Request finished in 2.6612ms 302 
+2020-01-29 15:22:08.016 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Account/Login?ReturnUrl=%2Fabout-us  
+2020-01-29 15:22:08.017 +08:00 [INF] Executing endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 15:22:08.018 +08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Web.Controllers.AccountController (Web).
+2020-01-29 15:22:08.020 +08:00 [INF] Executing ViewResult, running view Login.
+2020-01-29 15:22:08.023 +08:00 [INF] Executed ViewResult - view Login executed in 3.3971ms.
+2020-01-29 15:22:08.024 +08:00 [INF] Executed action Web.Controllers.AccountController.Login (Web) in 5.524500000000001ms
+2020-01-29 15:22:08.025 +08:00 [INF] Executed endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 15:22:08.026 +08:00 [INF] Request finished in 10.024600000000001ms 200 text/html; charset=utf-8
+2020-01-29 15:22:08.716 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/about-vae  
+2020-01-29 15:22:08.718 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.AboutVae (Web)'
+2020-01-29 15:22:08.722 +08:00 [INF] Route matched with {action = "AboutVae", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AboutVae() on controller Web.Controllers.HomeController (Web).
+2020-01-29 15:22:08.724 +08:00 [WRN] 这是一个严重的警告日志,错误变量555,666
+2020-01-29 15:22:08.725 +08:00 [INF] Executing ViewResult, running view AboutVae.
+2020-01-29 15:22:08.729 +08:00 [INF] Executed ViewResult - view AboutVae executed in 4.2721ms.
+2020-01-29 15:22:08.730 +08:00 [INF] Executed action Web.Controllers.HomeController.AboutVae (Web) in 6.4851ms
+2020-01-29 15:22:08.731 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.AboutVae (Web)'
+2020-01-29 15:22:08.731 +08:00 [INF] Request finished in 15.0976ms 200 text/html; charset=utf-8
+2020-01-29 15:22:12.611 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/home/privacy  
+2020-01-29 15:22:12.614 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Privacy (Web)'
+2020-01-29 15:22:12.614 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller Web.Controllers.HomeController (Web).
+2020-01-29 15:22:12.616 +08:00 [INF] Executing ViewResult, running view Privacy.
+2020-01-29 15:22:12.619 +08:00 [INF] Executed ViewResult - view Privacy executed in 3.7117ms.
+2020-01-29 15:22:12.622 +08:00 [INF] Executed action Web.Controllers.HomeController.Privacy (Web) in 6.2427ms
+2020-01-29 15:22:12.622 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Privacy (Web)'
+2020-01-29 15:22:12.624 +08:00 [INF] Request finished in 13.1004ms 200 text/html; charset=utf-8
+2020-01-29 15:22:13.366 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/about-us  
+2020-01-29 15:22:13.367 +08:00 [INF] Authorization failed.
+2020-01-29 15:22:13.368 +08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2020-01-29 15:22:13.368 +08:00 [INF] Request finished in 2.2533000000000003ms 302 
+2020-01-29 15:22:13.385 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Account/Login?ReturnUrl=%2Fabout-us  
+2020-01-29 15:22:13.386 +08:00 [INF] Executing endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 15:22:13.386 +08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Web.Controllers.AccountController (Web).
+2020-01-29 15:22:13.388 +08:00 [INF] Executing ViewResult, running view Login.
+2020-01-29 15:22:13.391 +08:00 [INF] Executed ViewResult - view Login executed in 3.2190000000000003ms.
+2020-01-29 15:22:13.393 +08:00 [INF] Executed action Web.Controllers.AccountController.Login (Web) in 5.9358ms
+2020-01-29 15:22:13.394 +08:00 [INF] Executed endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 15:22:13.395 +08:00 [INF] Request finished in 10.2232ms 200 text/html; charset=utf-8
+2020-01-29 15:22:13.886 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/about-vae  
+2020-01-29 15:22:13.887 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.AboutVae (Web)'
+2020-01-29 15:22:13.888 +08:00 [INF] Route matched with {action = "AboutVae", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AboutVae() on controller Web.Controllers.HomeController (Web).
+2020-01-29 15:22:13.888 +08:00 [WRN] 这是一个严重的警告日志,错误变量555,666
+2020-01-29 15:22:13.890 +08:00 [INF] Executing ViewResult, running view AboutVae.
+2020-01-29 15:22:13.894 +08:00 [INF] Executed ViewResult - view AboutVae executed in 4.8773ms.
+2020-01-29 15:22:13.897 +08:00 [INF] Executed action Web.Controllers.HomeController.AboutVae (Web) in 8.1201ms
+2020-01-29 15:22:13.897 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.AboutVae (Web)'
+2020-01-29 15:22:13.898 +08:00 [INF] Request finished in 12.038400000000001ms 200 text/html; charset=utf-8
+2020-01-29 15:22:15.024 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/home/privacy  
+2020-01-29 15:22:15.025 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Privacy (Web)'
+2020-01-29 15:22:15.027 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller Web.Controllers.HomeController (Web).
+2020-01-29 15:22:15.030 +08:00 [INF] Executing ViewResult, running view Privacy.
+2020-01-29 15:22:15.035 +08:00 [INF] Executed ViewResult - view Privacy executed in 4.4644ms.
+2020-01-29 15:22:15.037 +08:00 [INF] Executed action Web.Controllers.HomeController.Privacy (Web) in 6.8246ms
+2020-01-29 15:22:15.038 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Privacy (Web)'
+2020-01-29 15:22:15.039 +08:00 [INF] Request finished in 15.396ms 200 text/html; charset=utf-8
+2020-01-29 15:22:17.006 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 15:22:17.007 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 15:22:17.007 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 15:22:17.008 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 15:22:17.009 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 15:22:17.010 +08:00 [INF] Executed ViewResult - view Index executed in 1.5133ms.
+2020-01-29 15:22:17.012 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 3.7252ms
+2020-01-29 15:22:17.013 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 15:22:17.014 +08:00 [INF] Request finished in 7.9891000000000005ms 200 text/html; charset=utf-8
+2020-01-29 16:35:04.804 +08:00 [INF] User profile is available. Using 'C:\Users\Vae\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-29 16:35:05.087 +08:00 [INF] Now listening on: https://localhost:5001
+2020-01-29 16:35:05.088 +08:00 [INF] Now listening on: http://localhost:5000
+2020-01-29 16:35:05.088 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-01-29 16:35:05.089 +08:00 [INF] Hosting environment: Development
+2020-01-29 16:35:05.089 +08:00 [INF] Content root path: D:\学习\GitProject\StudyNetCore\Web
+2020-01-29 16:35:05.825 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 16:35:05.872 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 16:35:05.917 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 16:35:05.931 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 16:35:05.977 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:35:06.071 +08:00 [INF] Executed ViewResult - view Index executed in 95.5162ms.
+2020-01-29 16:35:06.073 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 154.91670000000002ms
+2020-01-29 16:35:06.075 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 16:35:06.078 +08:00 [INF] Request finished in 254.63430000000002ms 200 text/html; charset=utf-8
+2020-01-29 16:35:10.866 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/product  
+2020-01-29 16:35:10.869 +08:00 [INF] Executing endpoint 'Web.Controllers.ProductController.Index (Web)'
+2020-01-29 16:35:10.870 +08:00 [INF] Route matched with {action = "Index", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller Web.Controllers.ProductController (Web).
+2020-01-29 16:35:10.872 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:35:10.878 +08:00 [INF] Executed ViewResult - view Index executed in 6.5436000000000005ms.
+2020-01-29 16:35:10.880 +08:00 [INF] Executed action Web.Controllers.ProductController.Index (Web) in 8.9234ms
+2020-01-29 16:35:10.881 +08:00 [INF] Executed endpoint 'Web.Controllers.ProductController.Index (Web)'
+2020-01-29 16:35:10.881 +08:00 [INF] Request finished in 14.9426ms 200 text/html; charset=utf-8
+2020-01-29 16:35:13.233 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/home/privacy  
+2020-01-29 16:35:13.235 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Privacy (Web)'
+2020-01-29 16:35:13.238 +08:00 [INF] Route matched with {action = "Privacy", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Privacy() on controller Web.Controllers.HomeController (Web).
+2020-01-29 16:35:13.240 +08:00 [INF] Executing ViewResult, running view Privacy.
+2020-01-29 16:35:13.243 +08:00 [INF] Executed ViewResult - view Privacy executed in 4.047000000000001ms.
+2020-01-29 16:35:13.246 +08:00 [INF] Executed action Web.Controllers.HomeController.Privacy (Web) in 6.757000000000001ms
+2020-01-29 16:35:13.247 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Privacy (Web)'
+2020-01-29 16:35:13.248 +08:00 [INF] Request finished in 15.314ms 200 text/html; charset=utf-8
+2020-01-29 16:35:13.923 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 16:35:13.925 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 16:35:13.926 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 16:35:13.928 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 16:35:13.930 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:35:13.932 +08:00 [INF] Executed ViewResult - view Index executed in 2.6301ms.
+2020-01-29 16:35:13.933 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 5.2631000000000006ms
+2020-01-29 16:35:13.934 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 16:35:13.935 +08:00 [INF] Request finished in 11.827900000000001ms 200 text/html; charset=utf-8
+2020-01-29 16:35:15.453 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/product  
+2020-01-29 16:35:15.454 +08:00 [INF] Executing endpoint 'Web.Controllers.ProductController.Index (Web)'
+2020-01-29 16:35:15.455 +08:00 [INF] Route matched with {action = "Index", controller = "Product"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller Web.Controllers.ProductController (Web).
+2020-01-29 16:35:15.457 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:35:15.459 +08:00 [INF] Executed ViewResult - view Index executed in 2.0518ms.
+2020-01-29 16:35:15.460 +08:00 [INF] Executed action Web.Controllers.ProductController.Index (Web) in 3.0545ms
+2020-01-29 16:35:15.461 +08:00 [INF] Executed endpoint 'Web.Controllers.ProductController.Index (Web)'
+2020-01-29 16:35:15.463 +08:00 [INF] Request finished in 10.5258ms 200 text/html; charset=utf-8
+2020-01-29 16:41:02.461 +08:00 [INF] User profile is available. Using 'C:\Users\Vae\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-29 16:41:02.620 +08:00 [INF] Now listening on: https://localhost:5001
+2020-01-29 16:41:02.621 +08:00 [INF] Now listening on: http://localhost:5000
+2020-01-29 16:41:02.622 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-01-29 16:41:02.622 +08:00 [INF] Hosting environment: Development
+2020-01-29 16:41:02.623 +08:00 [INF] Content root path: D:\学习\GitProject\StudyNetCore\Web
+2020-01-29 16:41:07.928 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 16:41:07.968 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 16:41:08.004 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 16:41:08.011 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 16:41:08.052 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:41:08.125 +08:00 [INF] Executed ViewResult - view Index executed in 75.92320000000001ms.
+2020-01-29 16:41:08.128 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 122.99510000000001ms
+2020-01-29 16:41:08.129 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 16:41:08.132 +08:00 [INF] Request finished in 205.1879ms 200 text/html; charset=utf-8
+2020-01-29 16:41:10.872 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:41:10.880 +08:00 [INF] Authorization failed.
+2020-01-29 16:41:10.884 +08:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2020-01-29 16:41:10.885 +08:00 [INF] Request finished in 12.5587ms 302 
+2020-01-29 16:41:10.903 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/Account/Login?ReturnUrl=%2Fmovies  
+2020-01-29 16:41:10.905 +08:00 [INF] Executing endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 16:41:10.907 +08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Web.Controllers.AccountController (Web).
+2020-01-29 16:41:10.984 +08:00 [INF] Executing ViewResult, running view Login.
+2020-01-29 16:41:11.009 +08:00 [INF] Executed ViewResult - view Login executed in 25.6629ms.
+2020-01-29 16:41:11.011 +08:00 [INF] Executed action Web.Controllers.AccountController.Login (Web) in 103.5125ms
+2020-01-29 16:41:11.012 +08:00 [INF] Executed endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 16:41:11.013 +08:00 [INF] Request finished in 109.6332ms 200 text/html; charset=utf-8
+2020-01-29 16:41:14.970 +08:00 [INF] Request starting HTTP/2 POST https://localhost:5001/account/login application/x-www-form-urlencoded 210
+2020-01-29 16:41:14.972 +08:00 [INF] Executing endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 16:41:14.981 +08:00 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Web.ViewModels.LoginViewModel) on controller Web.Controllers.AccountController (Web).
+2020-01-29 16:41:15.296 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'IdentityContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:41:15.594 +08:00 [INF] Executing DbCommand [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PassWord], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE (([a].[NormalizedUserName] = @__normalizedUserName_0) AND ([a].[NormalizedUserName] IS NOT NULL AND @__normalizedUserName_0 IS NOT NULL)) OR ([a].[NormalizedUserName] IS NULL AND @__normalizedUserName_0 IS NULL)
+2020-01-29 16:41:15.728 +08:00 [INF] Executing DbCommand [Parameters=[@__user_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE ([a].[UserId] = @__user_Id_0) AND @__user_Id_0 IS NOT NULL
+2020-01-29 16:41:15.753 +08:00 [INF] Executing DbCommand [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE ([a].[UserId] = @__userId_0) AND @__userId_0 IS NOT NULL
+2020-01-29 16:41:15.762 +08:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2020-01-29 16:41:15.766 +08:00 [INF] Executing RedirectResult, redirecting to /.
+2020-01-29 16:41:15.769 +08:00 [INF] Executed action Web.Controllers.AccountController.Login (Web) in 786.0494ms
+2020-01-29 16:41:15.770 +08:00 [INF] Executed endpoint 'Web.Controllers.AccountController.Login (Web)'
+2020-01-29 16:41:15.774 +08:00 [INF] Request finished in 803.8383ms 302 
+2020-01-29 16:41:15.788 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 16:41:15.793 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 16:41:15.794 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 16:41:15.796 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 16:41:15.796 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:41:15.799 +08:00 [INF] Executed ViewResult - view Index executed in 2.9198ms.
+2020-01-29 16:41:15.801 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 5.9257ms
+2020-01-29 16:41:15.802 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 16:41:15.803 +08:00 [INF] Request finished in 14.692200000000001ms 200 text/html; charset=utf-8
+2020-01-29 16:41:18.002 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:41:18.008 +08:00 [INF] Authorization was successful.
+2020-01-29 16:41:18.009 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:41:18.012 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:41:18.136 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:41:18.141 +08:00 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+2020-01-29 16:41:18.155 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:41:18.185 +08:00 [INF] Executed ViewResult - view Index executed in 30.946ms.
+2020-01-29 16:41:18.187 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 174.20350000000002ms
+2020-01-29 16:41:18.188 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:41:18.189 +08:00 [INF] Request finished in 187.04850000000002ms 200 text/html; charset=utf-8
+2020-01-29 16:41:20.744 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1  
+2020-01-29 16:41:20.747 +08:00 [INF] Authorization was successful.
+2020-01-29 16:41:20.748 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:41:20.750 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:41:20.757 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:41:20.767 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:41:20.772 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:41:20.778 +08:00 [INF] Executed ViewResult - view Details executed in 6.7686ms.
+2020-01-29 16:41:20.780 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 28.9738ms
+2020-01-29 16:41:20.781 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:41:20.781 +08:00 [INF] Request finished in 37.277100000000004ms 200 text/html; charset=utf-8
+2020-01-29 16:41:26.100 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:41:26.102 +08:00 [INF] Authorization was successful.
+2020-01-29 16:41:26.102 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:41:26.103 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:41:26.105 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:41:26.112 +08:00 [INF] Executed ViewResult - view Index executed in 7.2527ms.
+2020-01-29 16:41:26.114 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 9.7367ms
+2020-01-29 16:41:26.115 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:41:26.116 +08:00 [INF] Request finished in 16.4752ms 200 text/html; charset=utf-8
+2020-01-29 16:41:27.707 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1002  
+2020-01-29 16:41:27.710 +08:00 [INF] Authorization was successful.
+2020-01-29 16:41:27.711 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:41:27.712 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:41:27.715 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:41:27.719 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:41:27.721 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:41:27.724 +08:00 [INF] Executed ViewResult - view Details executed in 2.7564ms.
+2020-01-29 16:41:27.725 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 11.702300000000001ms
+2020-01-29 16:41:27.726 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:41:27.726 +08:00 [INF] Request finished in 18.9583ms 200 text/html; charset=utf-8
+2020-01-29 16:41:29.195 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:41:29.197 +08:00 [INF] Authorization was successful.
+2020-01-29 16:41:29.199 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:41:29.200 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:41:29.201 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:41:29.210 +08:00 [INF] Executed ViewResult - view Index executed in 9.1856ms.
+2020-01-29 16:41:29.212 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 11.428600000000001ms
+2020-01-29 16:41:29.213 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:41:29.214 +08:00 [INF] Request finished in 19.4084ms 200 text/html; charset=utf-8
+2020-01-29 16:52:44.305 +08:00 [INF] User profile is available. Using 'C:\Users\Vae\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-29 16:52:44.473 +08:00 [INF] Now listening on: https://localhost:5001
+2020-01-29 16:52:44.474 +08:00 [INF] Now listening on: http://localhost:5000
+2020-01-29 16:52:44.475 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-01-29 16:52:44.476 +08:00 [INF] Hosting environment: Development
+2020-01-29 16:52:44.477 +08:00 [INF] Content root path: D:\学习\GitProject\StudyNetCore\Web
+2020-01-29 16:52:44.604 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1  
+2020-01-29 16:52:44.728 +08:00 [INF] Authorization was successful.
+2020-01-29 16:52:44.729 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:52:44.768 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:52:45.088 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:52:45.349 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:52:45.444 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:52:45.520 +08:00 [INF] Executed ViewResult - view Details executed in 75.68730000000001ms.
+2020-01-29 16:52:45.521 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 751.3960000000001ms
+2020-01-29 16:52:45.522 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:52:45.526 +08:00 [INF] Request finished in 924.6454ms 200 text/html; charset=utf-8
+2020-01-29 16:52:48.961 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/  
+2020-01-29 16:52:48.966 +08:00 [INF] Authorization was successful.
+2020-01-29 16:52:48.967 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:52:48.968 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:52:48.987 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:52:48.992 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:52:48.998 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:52:49.001 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 32.558800000000005ms
+2020-01-29 16:52:49.003 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:52:49.004 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Movies_Details.ExecuteAsync() in D:\学习\GitProject\StudyNetCore\Web\Views\Movies\Details.cshtml:line 15
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-01-29 16:52:49.046 +08:00 [INF] Request finished in 85.2436ms 500 text/html; charset=utf-8
+2020-01-29 16:52:54.597 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1  
+2020-01-29 16:52:54.602 +08:00 [INF] Authorization was successful.
+2020-01-29 16:52:54.603 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:52:54.604 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:52:54.610 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:52:54.615 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:52:54.620 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:52:54.624 +08:00 [INF] Executed ViewResult - view Details executed in 4.8104000000000005ms.
+2020-01-29 16:52:54.626 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 21.0041ms
+2020-01-29 16:52:54.626 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:52:54.627 +08:00 [INF] Request finished in 30.133000000000003ms 200 text/html; charset=utf-8
+2020-01-29 16:53:58.216 +08:00 [INF] User profile is available. Using 'C:\Users\Vae\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-29 16:53:58.401 +08:00 [INF] Now listening on: https://localhost:5001
+2020-01-29 16:53:58.402 +08:00 [INF] Now listening on: http://localhost:5000
+2020-01-29 16:53:58.402 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-01-29 16:53:58.403 +08:00 [INF] Hosting environment: Development
+2020-01-29 16:53:58.403 +08:00 [INF] Content root path: D:\学习\GitProject\StudyNetCore\Web
+2020-01-29 16:53:59.428 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-01-29 16:53:59.585 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 16:53:59.630 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-01-29 16:53:59.641 +08:00 [INF] 正在访问首页 1,2
+2020-01-29 16:53:59.702 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:53:59.804 +08:00 [INF] Executed ViewResult - view Index executed in 104.79780000000001ms.
+2020-01-29 16:53:59.806 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 173.61790000000002ms
+2020-01-29 16:53:59.807 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-01-29 16:53:59.812 +08:00 [INF] Request finished in 386.30190000000005ms 200 text/html; charset=utf-8
+2020-01-29 16:54:02.641 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:54:02.650 +08:00 [INF] Authorization was successful.
+2020-01-29 16:54:02.651 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:54:02.656 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:54:02.968 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:54:03.183 +08:00 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+2020-01-29 16:54:03.255 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:54:03.292 +08:00 [INF] Executed ViewResult - view Index executed in 37.3971ms.
+2020-01-29 16:54:03.294 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 636.8707ms
+2020-01-29 16:54:03.295 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:54:03.298 +08:00 [INF] Request finished in 657.1535ms 200 text/html; charset=utf-8
+2020-01-29 16:54:04.832 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1  
+2020-01-29 16:54:04.836 +08:00 [INF] Authorization was successful.
+2020-01-29 16:54:04.837 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:54:04.845 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:54:04.870 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:54:04.915 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:54:04.942 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:54:04.949 +08:00 [INF] Executed ViewResult - view Details executed in 7.7625ms.
+2020-01-29 16:54:04.951 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 104.98830000000001ms
+2020-01-29 16:54:04.952 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:54:04.953 +08:00 [INF] Request finished in 120.89580000000001ms 200 text/html; charset=utf-8
+2020-01-29 16:54:08.001 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/  
+2020-01-29 16:54:08.005 +08:00 [INF] Authorization was successful.
+2020-01-29 16:54:08.007 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:54:08.008 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:54:08.015 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:54:08.019 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:54:08.021 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:54:08.023 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 14.4677ms
+2020-01-29 16:54:08.024 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:54:08.025 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Movies_Details.ExecuteAsync() in D:\学习\GitProject\StudyNetCore\Web\Views\Movies\Details.cshtml:line 15
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-01-29 16:54:08.054 +08:00 [INF] Request finished in 53.2212ms 500 text/html; charset=utf-8

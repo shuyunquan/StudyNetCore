@@ -18,33 +18,14 @@ namespace Service
             _movieRepository = movieRepository;
         }
 
-        public Task<int> Add(MovieViewModel movieViewModel)
-        {
-            Movie movie = new Movie
-            {
-                Title = movieViewModel.Info
-            };
-            return _movieRepository.Add(movie);
-        }
-
         public Task<int> Add(Movie model)
         {
             return _movieRepository.Add(model);
         }
 
-        public Task<bool> Delete(Movie model)
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<bool> DeleteById(int id)
         {
             return _movieRepository.DeleteById(id);
-        }
-
-        public Task<bool> DeleteByIds(int[] ids)
-        {
-            throw new NotImplementedException();
         }
 
         public async Task<List<Movie>> Query()
@@ -55,6 +36,26 @@ namespace Service
         public async Task<bool> Update(Movie model)
         {
             return await _movieRepository.Update(model);
+        }
+
+        public async Task<Movie> QueryByID(int Id)
+        {
+            return await _movieRepository.QueryByID(Id);
+        }
+
+
+
+
+
+
+        public Task<bool> Delete(Movie model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> DeleteByIds(int[] ids)
+        {
+            throw new NotImplementedException();
         }
 
         public Task<List<Movie>> Query(string strWhere)
@@ -102,11 +103,7 @@ namespace Service
             throw new NotImplementedException();
         }
 
-        public async Task<Movie> QueryByID(int Id)
-        {
-            return await _movieRepository.QueryByID(Id);
-        }
-
+   
         public Task<Movie> QueryByID(int Id, bool blnUseCache = false)
         {
             throw new NotImplementedException();

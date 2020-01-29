@@ -1,0 +1,497 @@
+2020-01-29 16:54:00.270 +08:00 [INF] User profile is available. Using 'C:\Users\Vae\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-29 16:54:00.553 +08:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address https://127.0.0.1:5001: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+ ---> System.Net.Sockets.SocketException (10048): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2020-01-29 16:56:23.501 +08:00 [INF] User profile is available. Using 'C:\Users\Vae\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-29 16:56:23.665 +08:00 [INF] Now listening on: https://localhost:5001
+2020-01-29 16:56:23.666 +08:00 [INF] Now listening on: http://localhost:5000
+2020-01-29 16:56:23.667 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-01-29 16:56:23.668 +08:00 [INF] Hosting environment: Development
+2020-01-29 16:56:23.669 +08:00 [INF] Content root path: D:\学习\GitProject\StudyNetCore\Web
+2020-01-29 16:58:44.977 +08:00 [INF] User profile is available. Using 'C:\Users\Vae\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-01-29 16:58:45.136 +08:00 [INF] Now listening on: https://localhost:5001
+2020-01-29 16:58:45.138 +08:00 [INF] Now listening on: http://localhost:5000
+2020-01-29 16:58:45.139 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-01-29 16:58:45.140 +08:00 [INF] Hosting environment: Development
+2020-01-29 16:58:45.140 +08:00 [INF] Content root path: D:\学习\GitProject\StudyNetCore\Web
+2020-01-29 16:59:35.010 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1  
+2020-01-29 16:59:35.131 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:35.133 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:35.172 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:35.489 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:59:35.746 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:59:35.839 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:59:35.920 +08:00 [INF] Executed ViewResult - view Details executed in 80.56580000000001ms.
+2020-01-29 16:59:35.922 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 747.8240000000001ms
+2020-01-29 16:59:35.924 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:35.928 +08:00 [INF] Request finished in 919.5556ms 200 text/html; charset=utf-8
+2020-01-29 16:59:36.057 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-01-29 16:59:36.067 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\favicon.ico'
+2020-01-29 16:59:36.070 +08:00 [INF] Request finished in 13.4699ms 200 image/x-icon
+2020-01-29 16:59:39.215 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:59:39.219 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:39.219 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:39.224 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:39.248 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:59:39.253 +08:00 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+2020-01-29 16:59:39.263 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:59:39.290 +08:00 [INF] Executed ViewResult - view Index executed in 27.0165ms.
+2020-01-29 16:59:39.292 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 67.0291ms
+2020-01-29 16:59:39.294 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:39.296 +08:00 [INF] Request finished in 81.59ms 200 text/html; charset=utf-8
+2020-01-29 16:59:40.785 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1  
+2020-01-29 16:59:40.790 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:40.791 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:40.792 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:40.800 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:59:40.806 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:59:40.809 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:59:40.812 +08:00 [INF] Executed ViewResult - view Details executed in 2.9108ms.
+2020-01-29 16:59:40.813 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 19.3097ms
+2020-01-29 16:59:40.814 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:40.814 +08:00 [INF] Request finished in 29.8446ms 200 text/html; charset=utf-8
+2020-01-29 16:59:42.241 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:59:42.243 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:42.244 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:42.244 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:42.246 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:59:42.254 +08:00 [INF] Executed ViewResult - view Index executed in 7.8417ms.
+2020-01-29 16:59:42.255 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 9.717ms
+2020-01-29 16:59:42.255 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:42.256 +08:00 [INF] Request finished in 15.5175ms 200 text/html; charset=utf-8
+2020-01-29 16:59:43.646 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1  
+2020-01-29 16:59:43.649 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:43.650 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:43.651 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:43.653 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:59:43.655 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:59:43.658 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:59:43.660 +08:00 [INF] Executed ViewResult - view Details executed in 2.3308ms.
+2020-01-29 16:59:43.661 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 9.084ms
+2020-01-29 16:59:43.661 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:43.662 +08:00 [INF] Request finished in 15.9404ms 200 text/html; charset=utf-8
+2020-01-29 16:59:44.641 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:59:44.644 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:44.644 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:44.645 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:44.647 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:59:44.661 +08:00 [INF] Executed ViewResult - view Index executed in 14.480300000000002ms.
+2020-01-29 16:59:44.663 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 16.8092ms
+2020-01-29 16:59:44.664 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:44.666 +08:00 [INF] Request finished in 25.5275ms 200 text/html; charset=utf-8
+2020-01-29 16:59:46.327 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1002  
+2020-01-29 16:59:46.329 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:46.330 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:46.330 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:46.332 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:59:46.335 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:59:46.338 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:59:46.340 +08:00 [INF] Executed ViewResult - view Details executed in 2.2042ms.
+2020-01-29 16:59:46.341 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 9.2471ms
+2020-01-29 16:59:46.341 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:46.342 +08:00 [INF] Request finished in 15.4356ms 200 text/html; charset=utf-8
+2020-01-29 16:59:47.631 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:59:47.633 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:47.634 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:47.636 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:47.638 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:59:47.644 +08:00 [INF] Executed ViewResult - view Index executed in 5.6199ms.
+2020-01-29 16:59:47.646 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 7.7816ms
+2020-01-29 16:59:47.646 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:47.647 +08:00 [INF] Request finished in 15.653ms 200 text/html; charset=utf-8
+2020-01-29 16:59:48.939 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1002  
+2020-01-29 16:59:48.941 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:48.941 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:48.942 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:48.944 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:59:48.946 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:59:48.949 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:59:48.951 +08:00 [INF] Executed ViewResult - view Details executed in 2.8116000000000003ms.
+2020-01-29 16:59:48.953 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 10.4608ms
+2020-01-29 16:59:48.955 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:48.956 +08:00 [INF] Request finished in 16.834400000000002ms 200 text/html; charset=utf-8
+2020-01-29 16:59:50.143 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:59:50.145 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:50.145 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:50.146 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:50.147 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:59:50.153 +08:00 [INF] Executed ViewResult - view Index executed in 5.454400000000001ms.
+2020-01-29 16:59:50.155 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 8.419500000000001ms
+2020-01-29 16:59:50.156 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:50.157 +08:00 [INF] Request finished in 14.501900000000001ms 200 text/html; charset=utf-8
+2020-01-29 16:59:51.309 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1003  
+2020-01-29 16:59:51.310 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:51.311 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:51.311 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:51.313 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:59:51.315 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:59:51.318 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:59:51.321 +08:00 [INF] Executed ViewResult - view Details executed in 2.1423ms.
+2020-01-29 16:59:51.322 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 9.8086ms
+2020-01-29 16:59:51.323 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:51.324 +08:00 [INF] Request finished in 15.215100000000001ms 200 text/html; charset=utf-8
+2020-01-29 16:59:52.479 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:59:52.481 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:52.482 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:52.483 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:52.484 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:59:52.490 +08:00 [INF] Executed ViewResult - view Index executed in 6.2004ms.
+2020-01-29 16:59:52.492 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 7.8436ms
+2020-01-29 16:59:52.492 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:52.493 +08:00 [INF] Request finished in 14.328000000000001ms 200 text/html; charset=utf-8
+2020-01-29 16:59:54.166 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:59:54.168 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:54.168 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:54.169 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:54.171 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:59:54.178 +08:00 [INF] Executed ViewResult - view Index executed in 6.873ms.
+2020-01-29 16:59:54.180 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 8.7905ms
+2020-01-29 16:59:54.180 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:54.181 +08:00 [INF] Request finished in 15.2432ms 200 text/html; charset=utf-8
+2020-01-29 16:59:54.261 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-01-29 16:59:54.264 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\favicon.ico'
+2020-01-29 16:59:54.266 +08:00 [INF] Request finished in 4.9691ms 200 image/x-icon
+2020-01-29 16:59:55.921 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:59:55.922 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:55.923 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:55.923 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:55.925 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:59:55.930 +08:00 [INF] Executed ViewResult - view Index executed in 5.785200000000001ms.
+2020-01-29 16:59:55.932 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 7.988300000000001ms
+2020-01-29 16:59:55.933 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:55.934 +08:00 [INF] Request finished in 12.751000000000001ms 200 text/html; charset=utf-8
+2020-01-29 16:59:56.023 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-01-29 16:59:56.024 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\favicon.ico'
+2020-01-29 16:59:56.026 +08:00 [INF] Request finished in 3.5410000000000004ms 200 image/x-icon
+2020-01-29 16:59:57.150 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1003  
+2020-01-29 16:59:57.152 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:57.153 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:57.153 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:57.157 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:59:57.159 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:59:57.162 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:59:57.163 +08:00 [INF] Executed ViewResult - view Details executed in 1.7113ms.
+2020-01-29 16:59:57.164 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 8.391ms
+2020-01-29 16:59:57.165 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:57.166 +08:00 [INF] Request finished in 16.4496ms 200 text/html; charset=utf-8
+2020-01-29 16:59:58.237 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 16:59:58.238 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:58.239 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:58.239 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:58.241 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 16:59:58.246 +08:00 [INF] Executed ViewResult - view Index executed in 5.7301ms.
+2020-01-29 16:59:58.248 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 7.4805ms
+2020-01-29 16:59:58.248 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 16:59:58.249 +08:00 [INF] Request finished in 12.488900000000001ms 200 text/html; charset=utf-8
+2020-01-29 16:59:59.906 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1002  
+2020-01-29 16:59:59.907 +08:00 [INF] Authorization was successful.
+2020-01-29 16:59:59.908 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:59.908 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 16:59:59.910 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 16:59:59.914 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 16:59:59.916 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 16:59:59.918 +08:00 [INF] Executed ViewResult - view Details executed in 1.5756000000000001ms.
+2020-01-29 16:59:59.918 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 8.8934ms
+2020-01-29 16:59:59.919 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 16:59:59.920 +08:00 [INF] Request finished in 14.5218ms 200 text/html; charset=utf-8
+2020-01-29 17:00:01.892 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:00:01.893 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:01.894 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:01.894 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:01.895 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:00:01.901 +08:00 [INF] Executed ViewResult - view Index executed in 5.862ms.
+2020-01-29 17:00:01.903 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 7.855600000000001ms
+2020-01-29 17:00:01.904 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:01.905 +08:00 [INF] Request finished in 13.281600000000001ms 200 text/html; charset=utf-8
+2020-01-29 17:00:03.470 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:00:03.472 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:03.472 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:03.473 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:03.474 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:00:03.479 +08:00 [INF] Executed ViewResult - view Index executed in 4.3684ms.
+2020-01-29 17:00:03.481 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 6.5783000000000005ms
+2020-01-29 17:00:03.482 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:03.484 +08:00 [INF] Request finished in 13.369800000000001ms 200 text/html; charset=utf-8
+2020-01-29 17:00:03.579 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-01-29 17:00:03.581 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\favicon.ico'
+2020-01-29 17:00:03.583 +08:00 [INF] Request finished in 3.7548000000000004ms 200 image/x-icon
+2020-01-29 17:00:05.219 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1003  
+2020-01-29 17:00:05.221 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:05.221 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:00:05.222 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:05.223 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 17:00:05.225 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 17:00:05.227 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 17:00:05.228 +08:00 [INF] Executed ViewResult - view Details executed in 1.4351ms.
+2020-01-29 17:00:05.229 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 6.3298000000000005ms
+2020-01-29 17:00:05.230 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:00:05.243 +08:00 [INF] Request finished in 24.64ms 200 text/html; charset=utf-8
+2020-01-29 17:00:06.289 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:00:06.291 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:06.291 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:06.292 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:06.293 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:00:06.298 +08:00 [INF] Executed ViewResult - view Index executed in 5.3982ms.
+2020-01-29 17:00:06.301 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 8.032ms
+2020-01-29 17:00:06.302 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:06.303 +08:00 [INF] Request finished in 13.645800000000001ms 200 text/html; charset=utf-8
+2020-01-29 17:00:07.670 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1  
+2020-01-29 17:00:07.680 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:07.681 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:00:07.682 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:07.685 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 17:00:07.688 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 17:00:07.690 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 17:00:07.692 +08:00 [INF] Executed ViewResult - view Details executed in 1.6461000000000001ms.
+2020-01-29 17:00:07.693 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 9.1418ms
+2020-01-29 17:00:07.694 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:00:07.694 +08:00 [INF] Request finished in 24.129ms 200 text/html; charset=utf-8
+2020-01-29 17:00:08.815 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:00:08.818 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:08.818 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:08.819 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:08.820 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:00:08.825 +08:00 [INF] Executed ViewResult - view Index executed in 4.2064ms.
+2020-01-29 17:00:08.827 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 6.8125ms
+2020-01-29 17:00:08.828 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:08.829 +08:00 [INF] Request finished in 13.2805ms 200 text/html; charset=utf-8
+2020-01-29 17:00:10.016 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1  
+2020-01-29 17:00:10.017 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:10.018 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:00:10.019 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:10.021 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 17:00:10.024 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 17:00:10.026 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 17:00:10.027 +08:00 [INF] Executed ViewResult - view Details executed in 1.2697ms.
+2020-01-29 17:00:10.028 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 7.1634ms
+2020-01-29 17:00:10.029 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:00:10.029 +08:00 [INF] Request finished in 13.3064ms 200 text/html; charset=utf-8
+2020-01-29 17:00:11.190 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:00:11.192 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:11.193 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:11.193 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:11.194 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:00:11.198 +08:00 [INF] Executed ViewResult - view Index executed in 3.9529ms.
+2020-01-29 17:00:11.200 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 5.6729ms
+2020-01-29 17:00:11.201 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:11.201 +08:00 [INF] Request finished in 11.619200000000001ms 200 text/html; charset=utf-8
+2020-01-29 17:00:12.558 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:00:12.559 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:12.560 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:12.560 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:12.562 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:00:12.566 +08:00 [INF] Executed ViewResult - view Index executed in 4.0926ms.
+2020-01-29 17:00:12.569 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 6.4644ms
+2020-01-29 17:00:12.569 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:12.570 +08:00 [INF] Request finished in 12.0801ms 200 text/html; charset=utf-8
+2020-01-29 17:00:12.656 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-01-29 17:00:12.659 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\favicon.ico'
+2020-01-29 17:00:12.660 +08:00 [INF] Request finished in 4.0707ms 200 image/x-icon
+2020-01-29 17:00:13.735 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:00:13.736 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:13.736 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:13.737 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:13.738 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:00:13.743 +08:00 [INF] Executed ViewResult - view Index executed in 4.8904000000000005ms.
+2020-01-29 17:00:13.744 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 6.0601ms
+2020-01-29 17:00:13.745 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:13.745 +08:00 [INF] Request finished in 10.777600000000001ms 200 text/html; charset=utf-8
+2020-01-29 17:00:13.832 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-01-29 17:00:13.833 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\favicon.ico'
+2020-01-29 17:00:13.836 +08:00 [INF] Request finished in 4.109500000000001ms 200 image/x-icon
+2020-01-29 17:00:14.778 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1020  
+2020-01-29 17:00:14.780 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:14.780 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:00:14.781 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:14.783 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 17:00:14.784 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 17:00:14.787 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 17:00:14.789 +08:00 [INF] Executed ViewResult - view Details executed in 1.3164ms.
+2020-01-29 17:00:14.789 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 7.2923ms
+2020-01-29 17:00:14.790 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:00:14.791 +08:00 [INF] Request finished in 12.1506ms 200 text/html; charset=utf-8
+2020-01-29 17:00:15.941 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:00:15.943 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:15.944 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:15.945 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:15.946 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:00:15.950 +08:00 [INF] Executed ViewResult - view Index executed in 4.066ms.
+2020-01-29 17:00:15.951 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 5.7338000000000005ms
+2020-01-29 17:00:15.953 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:15.953 +08:00 [INF] Request finished in 12.1508ms 200 text/html; charset=utf-8
+2020-01-29 17:00:18.088 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1  
+2020-01-29 17:00:18.090 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:18.090 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:00:18.091 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:18.093 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 17:00:18.096 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 17:00:18.099 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 17:00:18.100 +08:00 [INF] Executed ViewResult - view Details executed in 1.3799000000000001ms.
+2020-01-29 17:00:18.101 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 8.1393ms
+2020-01-29 17:00:18.101 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:00:18.102 +08:00 [INF] Request finished in 13.2156ms 200 text/html; charset=utf-8
+2020-01-29 17:00:19.142 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:00:19.143 +08:00 [INF] Authorization was successful.
+2020-01-29 17:00:19.144 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:19.146 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:00:19.147 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:00:19.151 +08:00 [INF] Executed ViewResult - view Index executed in 4.2979ms.
+2020-01-29 17:00:19.152 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 5.8059ms
+2020-01-29 17:00:19.154 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:00:19.155 +08:00 [INF] Request finished in 12.583300000000001ms 200 text/html; charset=utf-8
+2020-01-29 17:10:22.683 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1016  
+2020-01-29 17:10:22.684 +08:00 [INF] Authorization was successful.
+2020-01-29 17:10:22.684 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:10:22.685 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:10:22.686 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 17:10:22.690 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 17:10:22.694 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 17:10:22.695 +08:00 [INF] Executed ViewResult - view Details executed in 1.2916ms.
+2020-01-29 17:10:22.696 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 10.1996ms
+2020-01-29 17:10:22.696 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:10:22.697 +08:00 [INF] Request finished in 13.7394ms 200 text/html; charset=utf-8
+2020-01-29 17:10:23.961 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:10:23.963 +08:00 [INF] Authorization was successful.
+2020-01-29 17:10:23.963 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:23.964 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:10:23.965 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 17:10:23.966 +08:00 [INF] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+2020-01-29 17:10:23.968 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:10:23.973 +08:00 [INF] Executed ViewResult - view Index executed in 4.606ms.
+2020-01-29 17:10:23.974 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 9.675600000000001ms
+2020-01-29 17:10:23.976 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:23.976 +08:00 [INF] Request finished in 15.0151ms 200 text/html; charset=utf-8
+2020-01-29 17:10:25.532 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:10:25.532 +08:00 [INF] Authorization was successful.
+2020-01-29 17:10:25.533 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:25.534 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:10:25.535 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:10:25.539 +08:00 [INF] Executed ViewResult - view Index executed in 3.6660000000000004ms.
+2020-01-29 17:10:25.540 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 5.0963ms
+2020-01-29 17:10:25.541 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:25.541 +08:00 [INF] Request finished in 9.6183ms 200 text/html; charset=utf-8
+2020-01-29 17:10:25.708 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-01-29 17:10:25.710 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\favicon.ico'
+2020-01-29 17:10:25.712 +08:00 [INF] Request finished in 3.6948000000000003ms 200 image/x-icon
+2020-01-29 17:10:26.946 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies/details/1  
+2020-01-29 17:10:26.947 +08:00 [INF] Authorization was successful.
+2020-01-29 17:10:26.948 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:10:26.949 +08:00 [INF] Route matched with {action = "Details", controller = "Movies"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Details(Int32) on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:10:26.950 +08:00 [INF] Entity Framework Core 3.0.0 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-01-29 17:10:26.952 +08:00 [INF] Executing DbCommand [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[ID], [m].[Genre], [m].[Price], [m].[ReleaseDate], [m].[Title]
+FROM [Movie] AS [m]
+WHERE ([m].[ID] = @__p_0) AND @__p_0 IS NOT NULL
+2020-01-29 17:10:26.954 +08:00 [INF] Executing ViewResult, running view Details.
+2020-01-29 17:10:26.955 +08:00 [INF] Executed ViewResult - view Details executed in 1.0718ms.
+2020-01-29 17:10:26.957 +08:00 [INF] Executed action Web.Controllers.MoviesController.Details (Web) in 6.9987ms
+2020-01-29 17:10:26.957 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Details (Web)'
+2020-01-29 17:10:26.958 +08:00 [INF] Request finished in 11.591700000000001ms 200 text/html; charset=utf-8
+2020-01-29 17:10:28.244 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:10:28.245 +08:00 [INF] Authorization was successful.
+2020-01-29 17:10:28.245 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:28.246 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:10:28.249 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:10:28.252 +08:00 [INF] Executed ViewResult - view Index executed in 3.9997000000000003ms.
+2020-01-29 17:10:28.254 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 5.3417ms
+2020-01-29 17:10:28.254 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:28.255 +08:00 [INF] Request finished in 11.2149ms 200 text/html; charset=utf-8
+2020-01-29 17:10:30.113 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:10:30.114 +08:00 [INF] Authorization was successful.
+2020-01-29 17:10:30.114 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:30.115 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:10:30.117 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:10:30.121 +08:00 [INF] Executed ViewResult - view Index executed in 4.242900000000001ms.
+2020-01-29 17:10:30.123 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 5.870500000000001ms
+2020-01-29 17:10:30.123 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:30.124 +08:00 [INF] Request finished in 11.3407ms 200 text/html; charset=utf-8
+2020-01-29 17:10:30.228 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-01-29 17:10:30.229 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\favicon.ico'
+2020-01-29 17:10:30.232 +08:00 [INF] Request finished in 3.3785000000000003ms 200 image/x-icon
+2020-01-29 17:10:39.797 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:10:39.798 +08:00 [INF] Authorization was successful.
+2020-01-29 17:10:39.799 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:39.799 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:10:39.800 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:10:39.804 +08:00 [INF] Executed ViewResult - view Index executed in 3.6784000000000003ms.
+2020-01-29 17:10:39.805 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 5.2010000000000005ms
+2020-01-29 17:10:39.806 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:39.808 +08:00 [INF] Request finished in 10.1561ms 200 text/html; charset=utf-8
+2020-01-29 17:10:39.911 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-01-29 17:10:39.912 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\favicon.ico'
+2020-01-29 17:10:39.914 +08:00 [INF] Request finished in 2.8472ms 200 image/x-icon
+2020-01-29 17:10:41.433 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/movies  
+2020-01-29 17:10:41.434 +08:00 [INF] Authorization was successful.
+2020-01-29 17:10:41.434 +08:00 [INF] Executing endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:41.435 +08:00 [INF] Route matched with {action = "Index", controller = "Movies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Web.Controllers.MoviesController (Web).
+2020-01-29 17:10:41.436 +08:00 [INF] Executing ViewResult, running view Index.
+2020-01-29 17:10:41.439 +08:00 [INF] Executed ViewResult - view Index executed in 3.7083000000000004ms.
+2020-01-29 17:10:41.441 +08:00 [INF] Executed action Web.Controllers.MoviesController.Index (Web) in 5.3157000000000005ms
+2020-01-29 17:10:41.442 +08:00 [INF] Executed endpoint 'Web.Controllers.MoviesController.Index (Web)'
+2020-01-29 17:10:41.443 +08:00 [INF] Request finished in 10.5591ms 200 text/html; charset=utf-8
+2020-01-29 17:10:41.531 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-01-29 17:10:41.532 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\学习\GitProject\StudyNetCore\Web\wwwroot\favicon.ico'
+2020-01-29 17:10:41.533 +08:00 [INF] Request finished in 2.1516ms 200 image/x-icon
