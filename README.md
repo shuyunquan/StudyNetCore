@@ -1,2 +1,1 @@
-# StudyNetCore
-瀛︿範.Net Core,璁板綍鎴戠殑瀛︿範璺▼
+# 这个项目是专门学习C#而创建的
