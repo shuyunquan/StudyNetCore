@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomainModels;
+using System;
 using System.Runtime.InteropServices;
 
 namespace StudyCSharp
@@ -7,6 +8,7 @@ namespace StudyCSharp
     {
         static void Main(string[] args)
         {
+            #region ref out
             var s = ("许嵩", "阿萨", "方式");
             Console.WriteLine(s.Item1);
 
@@ -18,6 +20,14 @@ namespace StudyCSharp
             int b;
             int asd = Calcu(a,out b);
             Console.WriteLine(asd + " : " + b);
+            #endregion
+
+            #region 泛型
+            StudyT<string> studyT = new StudyT<string>();
+            studyT.Add("许嵩");
+
+            #endregion
+
 
             Console.Read();
         }
