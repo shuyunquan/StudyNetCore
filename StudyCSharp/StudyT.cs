@@ -8,7 +8,7 @@ namespace StudyCSharp
     /// <summary>
     /// 学习泛型的类
     /// </summary>
-    public class StudyT<T> where T : Movie
+    public class StudyT<T>
     {
 
         public void Add(T name)
