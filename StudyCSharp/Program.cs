@@ -33,6 +33,9 @@ namespace StudyCSharp
 
  
             jjjjj("大蛋",MyCalcu);
+
+            vae("许嵩",vaeasd);
+
             #endregion
 
             Console.Read();
@@ -64,6 +67,21 @@ namespace StudyCSharp
            string asd = myDelegate(name);
             Console.WriteLine(asd);
         }
+
+
+
+        public static void vaeasd(string name)
+        {
+            Console.WriteLine(name + "太牛逼了,没有返回值的牛逼!");
+        }
+
+        public delegate void VaeDelegate(string name);
+
+        public static void vae(string name, VaeDelegate myDelegate)
+        {
+            myDelegate(name);
+        }
+
 
         public static void asd(string name)
         {
