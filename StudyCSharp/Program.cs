@@ -29,10 +29,10 @@ namespace StudyCSharp
 
             #region 委托
 
-            Calcu(6, 4, MyCalcu);
+            //Calcu(6, 4, MyCalcu);
 
-            //MyDelegate myDelegate = asd("许嵩");
-            //jjjjj(myDelegate);
+ 
+            jjjjj("大蛋",MyCalcu);
             #endregion
 
             Console.Read();
@@ -52,11 +52,18 @@ namespace StudyCSharp
         }
 
 
-        //public Func<string,string> string MyDelegate(string name);
-        //public static void jjjjj(MyDelegate myDelegate)
-        //{
-        //    myDelegate();
-        //}
+        public static string MyCalcu(string name)
+        {
+            return name + "太牛逼了";
+        }
+
+        public delegate string MyDelegate(string name);
+
+        public static void jjjjj(string name,MyDelegate myDelegate)
+        {
+           string asd = myDelegate(name);
+            Console.WriteLine(asd);
+        }
 
         public static void asd(string name)
         {
