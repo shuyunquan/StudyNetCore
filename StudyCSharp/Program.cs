@@ -28,18 +28,28 @@ namespace StudyCSharp
             #endregion
 
             #region 委托
-
             //Calcu(6, 4, MyCalcu);
+            //jjjjj("大蛋",MyCalcu);
+            //vae("许嵩",vaeasd);
 
- 
-            jjjjj("大蛋",MyCalcu);
-
-            vae("许嵩",vaeasd);
+            StudyDelegate<int> studyDelegate = new StudyDelegate<int>();
+            studyDelegate.Sword(,);
 
             #endregion
 
             Console.Read();
         }
+
+        public static int SwordAdd(int x)
+        {
+            return x + y;
+        }
+
+        public static int SwordSquare(int x)
+        {
+            return x + y;
+        }
+
 
         public static int MyCalcu(int x, int y)
         {
