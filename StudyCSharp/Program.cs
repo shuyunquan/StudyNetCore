@@ -29,34 +29,36 @@ namespace StudyCSharp
 
             #region 委托
             //Calcu(6, 4, MyCalcu);
-            //jjjjj("大蛋",MyCalcu);
-            //vae("许嵩",vaeasd);
+            //jjjjj("海伦凯勒","大蛋", MyCalcu);
+            ////Lambda表达式
+            //jjjjj("海伦凯勒", "大蛋", (FirstName, LastName) => { return FirstName + LastName + "哈哈"; });
+            //vae("许嵩", vaeasd);
 
-            StudyDelegate<int> studyDelegate = new StudyDelegate<int>();
-            studyDelegate.Sword(,);
+            //下面这一段是发布订阅模式,是观察者模式
+            //Thermostat thermostat = new Thermostat();
+            //Heater heater = new Heater(60);
+            //Cooler cooler = new Cooler(80);
+            //thermostat.OnTemperatureChange += heater.OnTemperatureChanged;
+            //thermostat.OnTemperatureChange += cooler.OnTemperatureChanged;
+            //Console.WriteLine("请输入当前温度:");
+            //string currentTemperature = Console.ReadLine();
+            //thermostat.CurrentTemperature = int.Parse(currentTemperature);
+
+            #endregion
+
+            #region 线程
+
 
             #endregion
 
             Console.Read();
         }
 
-        public static int SwordAdd(int x)
-        {
-            return x + y;
-        }
-
-        public static int SwordSquare(int x)
-        {
-            return x + y;
-        }
-
-
         public static int MyCalcu(int x, int y)
         {
             return x + y;
         }
            
-
         public static void Calcu(int x, int y, Func<int,int,int> calculate)
         {
             int result = calculate(x, y);
@@ -64,17 +66,16 @@ namespace StudyCSharp
             Console.WriteLine("委托调用的结果:" + result.ToString());
         }
 
-
-        public static string MyCalcu(string name)
+        public static string MyCalcu(string FirstName, string LastName)
         {
-            return name + "太牛逼了";
+            return FirstName + LastName + "太牛逼了";
         }
 
-        public delegate string MyDelegate(string name);
+        public delegate string MyDelegate(string FirstName, string LastName);
 
-        public static void jjjjj(string name,MyDelegate myDelegate)
+        public static void jjjjj(string FirstName, string LastName, MyDelegate myDelegate)
         {
-           string asd = myDelegate(name);
+           string asd = myDelegate(FirstName, LastName);
             Console.WriteLine(asd);
         }
 
