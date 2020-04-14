@@ -5,7 +5,7 @@ using System.Text;
 namespace StudyCSharp
 {
     /// <summary>
-    /// 学习委托的类,我写一个计算器委托
+    /// 学习委托的类,弃用
     /// </summary>
     public class StudyDelegate<T>
     {

@@ -1,4 +1,5 @@
 ﻿using DomainModels;
+using StudyCSharp.DelegateDemo;
 using System;
 using System.Runtime.InteropServices;
 
@@ -43,6 +44,13 @@ namespace StudyCSharp
             //Console.WriteLine("请输入当前温度:");
             //string currentTemperature = Console.ReadLine();
             //thermostat.CurrentTemperature = int.Parse(currentTemperature);
+
+            //文豪讲的发布订阅模式,很棒
+            Server server = new Server();
+            Client client = new Client("文豪",true);
+            Client client1 = new Client("大蛋");
+            Client client2 = new Client("权权");
+            server.PublishInfo("好消息,许嵩发新歌啦");
 
             #endregion
 
