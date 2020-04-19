@@ -1,10 +1,27 @@
 ﻿using DomainModels;
 using StudyCSharp.DelegateDemo;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace StudyCSharp
 {
+
+    static class X
+    {
+        public static string Name { get; set; }
+        public static string PassWord { get; set; }
+
+        public static void Test() 
+        {
+            Console.WriteLine("测试");
+        }
+
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -46,20 +63,66 @@ namespace StudyCSharp
             //thermostat.CurrentTemperature = int.Parse(currentTemperature);
 
             //文豪讲的发布订阅模式,很棒
-            Server server = new Server();
-            Client client = new Client("文豪",true);
-            Client client1 = new Client("大蛋");
-            Client client2 = new Client("权权");
-            server.PublishInfo("好消息,许嵩发新歌啦");
+            //Server server = new Server();
+            //Client client = new Client("文豪",true);
+            //Client client1 = new Client("大蛋");
+            //Client client2 = new Client("权权");
+            //server.PublishInfo("好消息,许嵩发新歌啦");
+
+            #endregion
+
+            #region Linq
+            IEnumerable<string> list = new List<string>(){
+                "许嵩", "刘备", "诸葛亮"
+            };
+
+            var result = list.Where( a => a.Contains("刘备") );
+
 
             #endregion
 
             #region 线程
 
+            Thread thread = new Thread(DoWork);
+            thread.Start();
+            for (int i = 0; i < 1000; i++)
+            {
+                Console.Write('-');
+            }
+            thread.Join();
+            #endregion
+
+            #region 反射
+
+            ////反射第一种:GetType()  有实例对象,可以调用获取属性,方法,字段
+            //DateTime dateTime = new DateTime();
+            //Type type = dateTime.GetType();
+            //PropertyInfo[] propertyInfos = type.GetProperties(); //所有的属性
+            //MethodInfo[] methodInfos = type.GetMethods(); //所有的方法
+            //FieldInfo[] fieldInfos = type.GetFields(); //所有的字段
+
+            ////反射第二种:typeof()   没有实例对象的情况,比如静态类或单纯的类名
+            //Type type1 = typeof(X);
+            //PropertyInfo[] xpropertyInfos = type1.GetProperties(); //所有的属性
+            //MethodInfo[] xmethodInfos = type1.GetMethods(); //所有的方法
+            //FieldInfo[] xfieldInfos = type1.GetFields(); //所有的字段
+
+            //Type type2 = typeof(StudyThread);
+            //MethodInfo[] tmethodInfos = type2.GetMethods(); //所有的方法
+            //StudyThread studyThread = (StudyThread)Activator.CreateInstance(type2);//Activator是根据Type获取实例对象
+            //studyThread.Test();
 
             #endregion
 
             Console.Read();
+        }
+
+        public static void DoWork()
+        {
+            for (int i = 0; i < 1000; i++)
+            {
+                Console.Write('+');
+            }
         }
 
         public static int MyCalcu(int x, int y)
