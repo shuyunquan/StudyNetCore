@@ -19,6 +19,8 @@ using System;
 using Autofac;
 using Microsoft.AspNetCore.Mvc;
 using StackExchange.Redis;
+using DinkToPdf.Contracts;
+using DinkToPdf;
 
 namespace Web
 {
@@ -86,7 +88,13 @@ namespace Web
             });
 
             //Redis缓存
-            services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("192.168.28.128:6379"));
+            //services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("192.168.28.128:6379"));
+
+            //使用Haukcode.DinkToPdf,把HTML转成PDF
+            services.AddSingleton(typeof(IConverter),new SynchronizedConverter(new PdfTools()));
+            services.AddTransient<IPDFService, PDFService>();
+
+
         }
 
         /// <summary>

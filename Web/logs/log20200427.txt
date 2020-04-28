@@ -1,0 +1,122 @@
+2020-04-27 16:40:09.894 +08:00 [INF] User profile is available. Using 'C:\Users\Justin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-04-27 16:40:10.739 +08:00 [INF] Now listening on: https://localhost:5001
+2020-04-27 16:40:10.741 +08:00 [INF] Now listening on: http://localhost:5000
+2020-04-27 16:40:10.743 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-04-27 16:40:10.744 +08:00 [INF] Hosting environment: Development
+2020-04-27 16:40:10.745 +08:00 [INF] Content root path: D:\Vae\Git\StudyNetCore\Web
+2020-04-27 16:40:11.378 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-04-27 16:40:11.442 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-04-27 16:40:11.509 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-04-27 16:40:11.520 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 5.570200000000001ms
+2020-04-27 16:40:11.526 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-04-27 16:40:11.529 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'StackExchange.Redis.IConnectionMultiplexer' while attempting to activate 'Web.Controllers.HomeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-04-27 16:40:11.689 +08:00 [INF] Request finished in 313.7921ms 500 text/html; charset=utf-8
+2020-04-27 16:40:11.814 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/robots.txt  
+2020-04-27 16:40:11.825 +08:00 [INF] Request finished in 11.2326ms 404 text/plain
+2020-04-27 16:40:12.046 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/favicon.ico  
+2020-04-27 16:40:12.078 +08:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\Vae\Git\StudyNetCore\Web\wwwroot\favicon.ico'
+2020-04-27 16:40:12.087 +08:00 [INF] Request finished in 41.0972ms 200 image/x-icon
+2020-04-27 16:40:35.114 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/HtmlToPDF/GetPDF  
+2020-04-27 16:40:35.118 +08:00 [INF] Executing endpoint 'Web.Controllers.HtmlToPDFController.GetPDF (Web)'
+2020-04-27 16:40:35.121 +08:00 [INF] Route matched with {action = "GetPDF", controller = "HtmlToPDF"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.FileResult GetPDF() on controller Web.Controllers.HtmlToPDFController (Web).
+2020-04-27 16:40:35.785 +08:00 [INF] Executing Microsoft.AspNetCore.Mvc.FileContentResult, sending file with download name '' ...
+2020-04-27 16:40:35.790 +08:00 [INF] Executed action Web.Controllers.HtmlToPDFController.GetPDF (Web) in 668.606ms
+2020-04-27 16:40:35.791 +08:00 [INF] Executed endpoint 'Web.Controllers.HtmlToPDFController.GetPDF (Web)'
+2020-04-27 16:40:35.793 +08:00 [INF] Request finished in 678.5482000000001ms 200 application/pdf
+2020-04-27 16:55:44.273 +08:00 [INF] User profile is available. Using 'C:\Users\Justin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-04-27 16:55:44.757 +08:00 [INF] Now listening on: https://localhost:5001
+2020-04-27 16:55:44.758 +08:00 [INF] Now listening on: http://localhost:5000
+2020-04-27 16:55:44.759 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-04-27 16:55:44.759 +08:00 [INF] Hosting environment: Development
+2020-04-27 16:55:44.759 +08:00 [INF] Content root path: D:\Vae\Git\StudyNetCore\Web
+2020-04-27 16:55:45.089 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-04-27 16:55:45.156 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-04-27 16:55:45.212 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-04-27 16:55:45.223 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 6.2231000000000005ms
+2020-04-27 16:55:45.227 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-04-27 16:55:45.230 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'StackExchange.Redis.IConnectionMultiplexer' while attempting to activate 'Web.Controllers.HomeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-04-27 16:55:45.303 +08:00 [INF] Request finished in 215.82070000000002ms 500 text/html; charset=utf-8
+2020-04-27 16:56:31.147 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/HtmlToPDF/GetPDF  
+2020-04-27 16:56:31.150 +08:00 [INF] Executing endpoint 'Web.Controllers.HtmlToPDFController.GetPDF (Web)'
+2020-04-27 16:56:31.152 +08:00 [INF] Route matched with {action = "GetPDF", controller = "HtmlToPDF"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.FileResult GetPDF() on controller Web.Controllers.HtmlToPDFController (Web).
+2020-04-27 16:56:33.465 +08:00 [INF] Executing Microsoft.AspNetCore.Mvc.FileContentResult, sending file with download name '' ...
+2020-04-27 16:56:33.470 +08:00 [INF] Executed action Web.Controllers.HtmlToPDFController.GetPDF (Web) in 2310.83ms
+2020-04-27 16:56:33.471 +08:00 [INF] Executed endpoint 'Web.Controllers.HtmlToPDFController.GetPDF (Web)'
+2020-04-27 16:56:33.472 +08:00 [INF] Request finished in 2325.6757000000002ms 200 application/pdf
+2020-04-27 16:57:58.901 +08:00 [INF] User profile is available. Using 'C:\Users\Justin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-04-27 16:57:59.354 +08:00 [INF] Now listening on: https://localhost:5001
+2020-04-27 16:57:59.355 +08:00 [INF] Now listening on: http://localhost:5000
+2020-04-27 16:57:59.355 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-04-27 16:57:59.356 +08:00 [INF] Hosting environment: Development
+2020-04-27 16:57:59.356 +08:00 [INF] Content root path: D:\Vae\Git\StudyNetCore\Web
+2020-04-27 16:57:59.940 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/  
+2020-04-27 16:58:00.007 +08:00 [INF] Executing endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-04-27 16:58:00.079 +08:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Web.Controllers.HomeController (Web).
+2020-04-27 16:58:00.089 +08:00 [INF] Executed action Web.Controllers.HomeController.Index (Web) in 4.988700000000001ms
+2020-04-27 16:58:00.092 +08:00 [INF] Executed endpoint 'Web.Controllers.HomeController.Index (Web)'
+2020-04-27 16:58:00.097 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'StackExchange.Redis.IConnectionMultiplexer' while attempting to activate 'Web.Controllers.HomeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-04-27 16:58:00.169 +08:00 [INF] Request finished in 231.34820000000002ms 500 text/html; charset=utf-8
+2020-04-27 16:58:03.594 +08:00 [INF] Request starting HTTP/2 GET https://localhost:5001/HtmlToPDF/GetPDF  
+2020-04-27 16:58:03.601 +08:00 [INF] Executing endpoint 'Web.Controllers.HtmlToPDFController.GetPDF (Web)'
+2020-04-27 16:58:03.605 +08:00 [INF] Route matched with {action = "GetPDF", controller = "HtmlToPDF"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.FileResult GetPDF() on controller Web.Controllers.HtmlToPDFController (Web).
+2020-04-27 16:58:03.988 +08:00 [INF] Executing Microsoft.AspNetCore.Mvc.FileContentResult, sending file with download name '' ...
+2020-04-27 16:58:03.993 +08:00 [INF] Executed action Web.Controllers.HtmlToPDFController.GetPDF (Web) in 385.2892ms
+2020-04-27 16:58:03.995 +08:00 [INF] Executed endpoint 'Web.Controllers.HtmlToPDFController.GetPDF (Web)'
+2020-04-27 16:58:03.996 +08:00 [INF] Request finished in 401.50620000000004ms 200 application/pdf
